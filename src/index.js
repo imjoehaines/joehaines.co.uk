@@ -3,9 +3,12 @@ import React, { Fragment } from 'react'
 import { injectGlobal } from 'styled-components'
 
 import App from './App'
+import getPosts from './util/get-posts'
 import globalStyles from './util/global-styles'
 
 injectGlobal`${globalStyles}`
+
+const posts = getPosts(__dirname)
 
 export default _ =>
   <Fragment>
@@ -17,5 +20,5 @@ export default _ =>
       <title>Joe Haines</title>
     </Helmet>
 
-    <App />
+    <App posts={posts} />
   </Fragment>

@@ -11,42 +11,24 @@ import BlogListItem from './components/BlogListItem'
 import PrimaryHeading from './components/PrimaryHeading'
 import BlogDescription from './components/BlogDescription'
 
-export default _ => (
+export default ({ posts }) => (
   <Fragment>
     <Header>
       <PrimaryHeading>Joe Haines <Waving>👋</Waving></PrimaryHeading>
     </Header>
 
     <BlogList>
-      <BlogListItem>
-        <Link>
-          <BlogTitle>Leverage agile frameworks to provide a robust synopsis</BlogTitle>
+      {posts.map(post =>
+        <BlogListItem key={post.date}>
+          <Link>
+            <BlogTitle>{post.title}</BlogTitle>
 
-          <BlogDescription>Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition</BlogDescription>
+            <BlogDescription>{post.description}</BlogDescription>
 
-          <Small>Feb 12 2018</Small>
-        </Link>
-      </BlogListItem>
-
-      <BlogListItem>
-        <Link>
-          <BlogTitle>Bring to the table win-win survival strategies</BlogTitle>
-
-          <BlogDescription>At the end of the day, going forward, a new normal that has evolved</BlogDescription>
-
-          <Small>Jan 31 2018</Small>
-        </Link>
-      </BlogListItem>
-
-      <BlogListItem>
-        <Link>
-          <BlogTitle>Capitalize on low hanging fruit</BlogTitle>
-
-          <BlogDescription>Override the digital divide with additional clickthroughs from DevOps</BlogDescription>
-
-          <Small>Dec 10 2017</Small>
-        </Link>
-      </BlogListItem>
+            <Small>{post.date}</Small>
+          </Link>
+        </BlogListItem>
+      )}
     </BlogList>
 
     <Footer />
