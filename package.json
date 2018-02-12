@@ -1,18 +1,31 @@
 {
-  "name": "joehaines.co.uk",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "git@github.com:imjoehaines/joehaines.co.uk.git",
-  "author": "Joe Haines <hello@joehaines.co.uk>",
-  "license": "MIT",
-  "dependencies": {
-    "@compositor/x0": "^3.1.1",
-    "date-fns": "^1.29.0",
-    "front-matter": "^2.3.0",
-    "styled-components": "^3.1.6"
-  },
-  "scripts": {
-    "start": "x0 dev ./src/index.js -o  --cssLibrary='styled-components'",
-    "build": "x0 build ./src/index.js --static --out-dir public --cssLibrary='styled-components'"
-  }
+	"name": "joehaines.co.uk",
+	"version": "1.0.0",
+	"main": "index.js",
+	"repository": "git@github.com:imjoehaines/joehaines.co.uk.git",
+	"author": "Joe Haines <hello@joehaines.co.uk>",
+	"license": "MIT",
+	"dependencies": {
+		"@compositor/x0": "^3.1.1",
+		"date-fns": "^1.29.0",
+		"front-matter": "^2.3.0",
+		"react-router-dom": "^4.2.2",
+		"slug": "^0.9.1",
+		"styled-components": "^3.1.6"
+	},
+	"scripts": {
+		"start": "x0 dev ./src/index.js -o  --cssLibrary='styled-components'",
+		"build": "x0 build ./src/index.js --static --out-dir public --cssLibrary='styled-components'",
+		"prebuild": "node generate-routes.js"
+	},
+	"x0": {
+		"routes": [
+			"/",
+			"/example-post",
+			"/another-example-post"
+		]
+	},
+	"devDependencies": {
+		"update-json-file": "^1.1.1"
+	}
 }
