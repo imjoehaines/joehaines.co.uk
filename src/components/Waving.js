@@ -13,6 +13,7 @@ const wave = keyframes`
 export default styled.span`
   display: inline-block;
   animation: ${wave} 800ms ease-in-out infinite alternate;
+  font-size: 80%;
 
   body:hover & {
     animation-play-state: paused;

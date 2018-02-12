@@ -1,18 +1,54 @@
 import React, { Fragment } from 'react'
-import styled from 'styled-components'
 
 import Link from './components/Link'
+import Small from './components/Small'
+import Footer from './components/Footer'
 import Header from './components/Header'
 import Waving from './components/Waving'
+import BlogList from './components/BlogList'
+import BlogTitle from './components/BlogTitle'
+import BlogListItem from './components/BlogListItem'
+import PrimaryHeading from './components/PrimaryHeading'
+import BlogDescription from './components/BlogDescription'
 
 export default _ => (
   <Fragment>
-    <Header>Hi! <Waving>👋</Waving></Header>
+    <Header>
+      <PrimaryHeading>Joe Haines <Waving>👋</Waving></PrimaryHeading>
+    </Header>
 
-    <p>I'm Joe Haines, a software developer at <Link href="http://www.mayden.co.uk/">Mayden</Link> where I work on <Link href="http://www.iaptus.co.uk/">iaptus</Link>, a patient management and reporting solution for psychological therapists.</p>
+    <BlogList>
+      <BlogListItem>
+        <Link>
+          <BlogTitle>Leverage agile frameworks to provide a robust synopsis</BlogTitle>
 
-    <p>Building things on the web is my passion — I love working in JavaScript, CSS &amp; Elm and I write more PHP than any reasonable person should…</p>
+          <BlogDescription>Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition</BlogDescription>
 
-    <p>You can find me on <Link href="https://github.com/imjoehaines">GitHub</Link> and email me at <Link href="mailto:hello@joehaines.co.uk">hello@joehaines.co.uk</Link>.</p>
+          <Small>Feb 12 2018</Small>
+        </Link>
+      </BlogListItem>
+
+      <BlogListItem>
+        <Link>
+          <BlogTitle>Bring to the table win-win survival strategies</BlogTitle>
+
+          <BlogDescription>At the end of the day, going forward, a new normal that has evolved</BlogDescription>
+
+          <Small>Jan 31 2018</Small>
+        </Link>
+      </BlogListItem>
+
+      <BlogListItem>
+        <Link>
+          <BlogTitle>Capitalize on low hanging fruit</BlogTitle>
+
+          <BlogDescription>Override the digital divide with additional clickthroughs from DevOps</BlogDescription>
+
+          <Small>Dec 10 2017</Small>
+        </Link>
+      </BlogListItem>
+    </BlogList>
+
+    <Footer />
   </Fragment>
 )

@@ -1,8 +1,8 @@
 export default `
   :root {
-    font-family: "-apple-system", BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 18px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-decoration-skip: ink;
+    color: #33;
   }
 
   html {
@@ -14,6 +14,7 @@ export default `
 
   body {
     margin: 0 auto;
+    min-width: 20vw;
     max-width: 35vw;
   }
 
