@@ -1,0 +1,44 @@
+#!/usr/bin/env node
+
+const fs = require('fs')
+const path = require('path')
+const readline = require('readline')
+
+const force = process.argv.includes('-f') || process.argv.includes('--force')
+
+const date = new Date().toISOString().slice(0, 10)
+
+const filePath = path.join(__dirname, 'src', 'posts', date + '.md')
+
+const exists = fs.existsSync(filePath)
+
+if (!force && exists) {
+  console.log(`A post called "${date}.md" already exists!`)
+
+  process.exit(1)
+}
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+})
+
+rl.question('Enter title: ', title => {
+  rl.question('Enter description: ', description => {
+    const frontmatter = `
+---
+title: ${title}
+description: ${description}
+---`.trim()
+
+    fs.writeFileSync(
+      filePath,
+      frontmatter + '\n\n'
+    )
+
+    console.log(`Created "${date}.md"`)
+    exists && console.log('Overwrote existing post!')
+
+    rl.close()
+  })
+})
