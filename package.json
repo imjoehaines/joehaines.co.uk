@@ -22,12 +22,11 @@
 	},
 	"x0": {
 		"routes": [
-			"/",
-			"/example-post",
-			"/another-example-post"
+			"/hello-world"
 		]
 	},
 	"devDependencies": {
+		"rimraf": "^2.6.2",
 		"update-json-file": "^1.1.1"
 	}
 }
