@@ -19,7 +19,8 @@ const slugs = fs.readdirSync(path.join(__dirname, 'src', 'posts')).reverse().map
 })
 
 updateJsonFile(path.join(__dirname, 'package.json'), data => {
-  data.x0.routes = slugs
+  // always add the home page!
+  data.x0.routes = ['/'].concat(slugs)
 
   return data
 })
