@@ -40,6 +40,7 @@
     "npm-watch": "^0.3.0",
     "postcss": "^6.0.17",
     "posthtml": "^0.11.2",
+    "posthtml-extend-attrs": "^1.0.0",
     "posthtml-remove-tags": "^0.1.0",
     "posthtml-style-to-file": "^0.1.1",
     "rimraf": "^2.6.2",

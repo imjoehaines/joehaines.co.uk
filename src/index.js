@@ -21,16 +21,18 @@ export default ({ basename, pathname }) =>
     context={{}}
   >
     <Fragment>
-      <head>
-        <meta charSet='utf-8' />
-        <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <link rel='stylesheet' href='/style.min.css' />
+      <html>
+        <head>
+          <meta charSet='utf-8' />
+          <meta name='viewport' content='width=device-width, initial-scale=1' />
+          <link rel='stylesheet' href='/style.min.css' />
 
-        <title>Joe Haines</title>
-      </head>
+          <title>Joe Haines</title>
+        </head>
 
-      <body>
-        <App posts={posts} />
-      </body>
+        <body>
+          <App posts={posts} />
+        </body>
+      </html>
     </Fragment>
   </Router>

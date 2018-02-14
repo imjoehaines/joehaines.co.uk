@@ -6,6 +6,7 @@ const postcss = require('postcss')
 const posthtml = require('posthtml')
 const removeTags = require('posthtml-remove-tags')
 const styleToFile = require('posthtml-style-to-file')
+const extendAttributes = require('posthtml-extend-attrs')
 
 const readFile = util.promisify(fs.readFile)
 const writeFile = util.promisify(fs.writeFile)
@@ -43,6 +44,7 @@ const processDirectory = (processor, directory, directoryPath) => {
   const processor = posthtml()
     .use(styleToFile({ path: styleFile }))
     .use(removeTags({ tags: ['style'] }))
+    .use(extendAttributes({ attrsTree: { html: { lang: 'en' } } }))
 
   processDirectory(
     processor,
