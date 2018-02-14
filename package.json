@@ -16,9 +16,9 @@
     "styled-components": "^3.1.6"
   },
   "scripts": {
-    "prebuild": "node generate-routes.js",
+    "prebuild": "node prebuild.js",
     "build": "x0 build ./src/index.js --static --out-dir public --cssLibrary='styled-components'",
-    "postbuild": "postcss ./node_modules/prismjs/themes/prism.css --no-map --use cssnano > ./public/prism.min.css",
+    "postbuild": "node postbuild.js",
     "test": "standard | snazzy",
     "watch": "npm-watch"
   },
@@ -37,7 +37,7 @@
   "devDependencies": {
     "cssnano": "^3.10.0",
     "npm-watch": "^0.3.0",
-    "postcss-cli": "^5.0.0",
+    "postcss": "^6.0.17",
     "rimraf": "^2.6.2",
     "snazzy": "^7.0.0",
     "standard": "^10.0.3",
