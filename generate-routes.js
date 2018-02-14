@@ -24,4 +24,4 @@ updateJsonFile(path.join(__dirname, 'package.json'), data => {
   data.x0.routes = ['/'].concat(slugs)
 
   return data
-})
+}, { indent: 2 })
