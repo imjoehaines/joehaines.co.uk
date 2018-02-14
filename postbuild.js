@@ -10,15 +10,45 @@ const styleToFile = require('posthtml-style-to-file')
 const readFile = util.promisify(fs.readFile)
 const writeFile = util.promisify(fs.writeFile)
 
-;(async _ => {
-  const styleFile = path.join(__dirname, 'public', 'style.min.css')
+const publicDirectory = path.join(__dirname, 'public')
 
-  const { html } = await posthtml()
+const processDirectory = (processor, directory, directoryPath) => {
+  directory
+    .reduce((acc, file) => {
+      const filePath = path.join(directoryPath, file)
+      const stat = fs.statSync(filePath)
+
+      if (stat.isDirectory()) {
+        processDirectory(processor, fs.readdirSync(filePath), filePath)
+
+        return acc
+      }
+
+      if (file.endsWith('.html')) {
+        return acc.concat(filePath)
+      }
+
+      return acc
+    }, [])
+    .forEach(async file => {
+      const { html } = await processor.process(await readFile(file))
+
+      writeFile(file, html)
+    })
+}
+
+;(async _ => {
+  const styleFile = path.join(publicDirectory, 'style.min.css')
+
+  const processor = posthtml()
     .use(styleToFile({ path: styleFile }))
     .use(removeTags({ tags: ['style'] }))
-    .process(await readFile(path.join(__dirname, 'public', 'index.html')))
 
-  await writeFile(path.join(__dirname, 'public', 'index.html'), html)
+  processDirectory(
+    processor,
+    fs.readdirSync(publicDirectory),
+    publicDirectory
+  )
 
   const prismCssFile = path.join(__dirname, 'node_modules', 'prismjs', 'themes', 'prism.css')
 
