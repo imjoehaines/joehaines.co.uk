@@ -5,6 +5,7 @@ const rimraf = require('rimraf')
 const frontMatter = require('front-matter')
 const updateJsonFile = require('update-json-file')
 
+// cleanup the exiting public directory
 const existingSlugs = require('./package.json').x0.routes
 existingSlugs.forEach(
   slug => slug !== '/' && rimraf(path.join(__dirname, 'public', slug.replace('/', '')),
