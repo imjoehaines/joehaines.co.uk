@@ -16,8 +16,9 @@
     "styled-components": "^3.1.6"
   },
   "scripts": {
-    "build": "x0 build ./src/index.js --static --out-dir public --cssLibrary='styled-components'",
     "prebuild": "node generate-routes.js",
+    "build": "x0 build ./src/index.js --static --out-dir public --cssLibrary='styled-components'",
+    "postbuild": "cp ./node_modules/prismjs/themes/prism.css ./public",
     "test": "standard | snazzy",
     "watch": "npm-watch"
   },
