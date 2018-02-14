@@ -1,7 +1,6 @@
 export default `
   :root {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-decoration-skip: ink;
     color: #333;
   }
 
