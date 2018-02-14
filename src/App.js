@@ -27,7 +27,7 @@ export default ({ basename, pathname, posts }) => (
 
             <BlogList>
               {posts.map(post =>
-                <BlogListItem key={post.date}>
+                <BlogListItem key={post.slug}>
                   <BlockLink to={post.slug}>
                     <BlogTitle>{post.title}</BlogTitle>
 
