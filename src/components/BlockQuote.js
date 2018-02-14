@@ -7,19 +7,23 @@ const BlockQuote = styled.blockquote`
   margin: 1rem 2rem;
 `
 
+const Right = styled.p`
+  text-align: right;
+`
+
 export default ({ children }) => {
   // grab the text content of the last line of content to use as citation
-  const cite = children.pop().props.children.join('')
+  const cite = children.pop().props.children
 
   return (
     <BlockQuote cite={cite}>
       {children}
 
-      <p style={{ textAlign: 'right' }}>
+      <Right>
         <Small>
           <cite>{cite}</cite>
         </Small>
-      </p>
+      </Right>
     </BlockQuote>
   )
 }
