@@ -21,7 +21,7 @@ export default ({ basename, pathname }) =>
     context={{}}
   >
     <Fragment>
-      <link rel='stylesheet' href='/prism.css' />
+      <link rel='stylesheet' href='/prism.min.css' />
 
       <App posts={posts} />
     </Fragment>
