@@ -5,7 +5,6 @@ import Code from './Code'
 import Date from './Date'
 import Link from './Link'
 import Small from './Small'
-import Header from './Header'
 import BlockQuote from './BlockQuote'
 import PrimaryHeading from './PrimaryHeading'
 
@@ -30,4 +29,8 @@ export default ({ title, date, body }) =>
         }
       }}
     />
+
+    <Small>
+      <Link href='/'>&larr; back home</Link>
+    </Small>
   </Fragment>

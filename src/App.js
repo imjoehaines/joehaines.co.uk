@@ -54,12 +54,6 @@ export default ({ basename, pathname, posts }) => (
       )}
     </Switch>
 
-    {pathname !== '/' &&
-      <Small>
-        <Link href='/'>&larr; back home</Link>
-      </Small>
-    }
-
     <Footer />
   </Fragment>
 )
