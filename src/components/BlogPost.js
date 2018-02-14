@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
 
+import Date from './Date'
 import Small from './Small'
 import Header from './Header'
 import PrimaryHeading from './PrimaryHeading'
@@ -10,7 +11,9 @@ export default ({ title, date, body }) =>
       <PrimaryHeading>{title}</PrimaryHeading>
     </Header>
 
-    <Small>{date}</Small>
+    <Small>
+      <Date date={date} />
+    </Small>
 
     <p>{body}</p>
   </Fragment>

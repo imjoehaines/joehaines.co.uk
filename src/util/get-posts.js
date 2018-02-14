@@ -12,7 +12,7 @@ export default root =>
     return {
       title,
       description,
-      date: format(path.basename(filename, '.md'), 'Do MMMM YYYY'),
+      date: new Date(path.basename(filename, '.md')),
       body,
       slug: slug(title, { lower: true })
     }

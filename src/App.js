@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react'
 import { Switch, Route } from 'react-router-dom'
 
+import Date from './components/Date'
 import Small from './components/Small'
 import Footer from './components/Footer'
 import Header from './components/Header'
@@ -33,7 +34,9 @@ export default ({ basename, pathname, posts }) => (
 
                     <BlogDescription>{post.description}</BlogDescription>
 
-                    <Small>{post.date}</Small>
+                    <Small>
+                      <Date date={post.date} />
+                    </Small>
                   </BlockLink>
                 </BlogListItem>
               )}
