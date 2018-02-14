@@ -16,10 +16,16 @@
     "styled-components": "^3.1.6"
   },
   "scripts": {
-    "start": "x0 dev ./src/index.js -o  --cssLibrary='styled-components'",
-    "test": "standard | snazzy",
     "build": "x0 build ./src/index.js --static --out-dir public --cssLibrary='styled-components'",
-    "prebuild": "node generate-routes.js"
+    "prebuild": "node generate-routes.js",
+    "test": "standard | snazzy",
+    "watch": "npm-watch"
+  },
+  "watch": {
+    "build": {
+      "patterns": "src/**/*",
+      "extensions": "js,md"
+    }
   },
   "x0": {
     "routes": [
@@ -28,6 +34,7 @@
     ]
   },
   "devDependencies": {
+    "npm-watch": "^0.3.0",
     "rimraf": "^2.6.2",
     "snazzy": "^7.0.0",
     "standard": "^10.0.3",
