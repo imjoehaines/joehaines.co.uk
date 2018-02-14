@@ -1,7 +1,6 @@
 import fs from 'fs'
 import path from 'path'
 import slug from 'slug'
-import format from 'date-fns/format'
 import frontMatter from 'front-matter'
 
 export default root =>
