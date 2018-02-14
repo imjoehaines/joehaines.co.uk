@@ -9,6 +9,8 @@
 		"@compositor/x0": "^3.1.1",
 		"date-fns": "^1.29.0",
 		"front-matter": "^2.3.0",
+		"prismjs": "^1.11.0",
+		"react-markdown": "^3.2.0",
 		"react-router-dom": "^4.2.2",
 		"slug": "^0.9.1",
 		"styled-components": "^3.1.6"

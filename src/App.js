@@ -2,6 +2,7 @@ import React, { Fragment } from 'react'
 import { Switch, Route } from 'react-router-dom'
 
 import Date from './components/Date'
+import Link from './components/Link'
 import Small from './components/Small'
 import Footer from './components/Footer'
 import Header from './components/Header'
@@ -52,6 +53,12 @@ export default ({ basename, pathname, posts }) => (
         />
       )}
     </Switch>
+
+    {pathname !== '/' &&
+      <Small>
+        <Link href='/'>&larr; back home</Link>
+      </Small>
+    }
 
     <Footer />
   </Fragment>

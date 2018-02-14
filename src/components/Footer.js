@@ -5,6 +5,7 @@ import Small from './Small'
 
 const Footer = styled.footer`
   margin-top: 4rem;
+  margin-bottom: 1rem;
 `
 
 export default _ =>

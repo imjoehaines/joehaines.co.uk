@@ -2,7 +2,7 @@ export default `
   :root {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-decoration-skip: ink;
-    color: #33;
+    color: #333;
   }
 
   html {
