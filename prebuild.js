@@ -6,11 +6,13 @@ const frontMatter = require('front-matter')
 const updateJsonFile = require('update-json-file')
 
 // cleanup the exiting public directory
-const existingSlugs = require('./package.json').x0.routes
-existingSlugs.forEach(
-  slug => slug !== '/' && rimraf(path.join(__dirname, 'public', slug.replace('/', '')),
-  err => { if (err) throw err })
-)
+require('./package.json').x0.routes
+  .filter(slug => slug !== '/')
+  .map(slug => slug.replace('/', ''))
+  .forEach(slug => rimraf(
+    path.join(__dirname, 'public', slug),
+    err => { if (err) throw err }
+  ))
 
 const slugs = fs.readdirSync(path.join(__dirname, 'src', 'posts')).reverse().map(filename => {
   const contents = fs.readFileSync(path.join(__dirname, 'src', 'posts', filename)).toString()
