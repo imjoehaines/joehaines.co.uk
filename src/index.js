@@ -1,17 +1,14 @@
 import React from 'react'
-import { StaticRouter, BrowserRouter } from 'react-router-dom'
+import { Route, StaticRouter, Switch } from 'react-router-dom'
 
-import App from './App'
 import getPosts from './util/get-posts'
-
-const Router = typeof document !== 'undefined'
-  ? BrowserRouter
-  : StaticRouter
+import BlogPost from './components/BlogPost'
+import BlogPostList from './components/BlogPostList'
 
 const posts = getPosts(__dirname)
 
 export default ({ basename, pathname }) =>
-  <Router
+  <StaticRouter
     basename={basename}
     location={pathname}
     context={{}}
@@ -26,7 +23,26 @@ export default ({ basename, pathname }) =>
       </head>
 
       <body>
-        <App posts={posts} />
+        <Switch>
+          <Route
+            exact
+            path='/'
+            render={_ => <BlogPostList posts={posts} />}
+          />
+          {posts.map(post =>
+            <Route
+              key={post.slug}
+              path={'/' + post.slug}
+              render={_ => <BlogPost {...post} />}
+            />
+          )}
+        </Switch>
+
+        <footer>
+          <small>
+            &copy; {new Date().getFullYear()} Joe Haines
+          </small>
+        </footer>
       </body>
     </html>
-  </Router>
+  </StaticRouter>
