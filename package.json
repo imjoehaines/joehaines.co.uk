@@ -32,6 +32,7 @@
   "x0": {
     "routes": [
       "/",
+      "/using-x0-as-a-blog-system",
       "/hello-world"
     ]
   },
