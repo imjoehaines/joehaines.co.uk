@@ -41,10 +41,9 @@ code:not([class^="language-"]) {
 pre[class*=language-],
 code:not([class^="language-"]),
 :not(pre) > code[class*=language-] {
-  background-color: rgba(242, 242, 242);
+  background-color: rgb(242, 242, 242);
   border-radius: 4px;
 }
-
 
 footer {
   margin-top: 4rem;
@@ -61,11 +60,79 @@ h6 {
   margin: 1rem 0 0;
 }
 
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 1.15rem;
+}
+
+h5 {
+  font-size: 1.1rem;
+}
+
+h6 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
 header {
   margin-bottom: 4rem;
+}
+
+hr {
+  border: 0;
+  height: 0;
+  border-bottom: 1px solid rgb(242, 242, 242);
+}
+
+img {
+  max-width: 100%;
+}
+
+@supports (max-width: calc(100% - 5vw)) {
+  img {
+    max-width: calc(100% + 5vw);
+    margin-left: -2.5vw;
+  }
 }
 
 small {
   font-size: .8rem;
   color: #aaa;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th {
+  font-weight: bold;
+}
+
+th,
+td {
+  padding: .8rem 1rem;
+  text-align: left;
+}
+
+th:first-child,
+td:first-child {
+  padding-left: 0;
+}
+
+th:last-child,
+td:last-child {
+  padding-right: 0;
 }
