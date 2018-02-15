@@ -25,7 +25,7 @@
   "watch": {
     "build": {
       "patterns": "src/**/*",
-      "extensions": "js,md"
+      "extensions": "css,js,md"
     }
   },
   "x0": {
