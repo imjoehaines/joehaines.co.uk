@@ -1,0 +1,11 @@
+@import 'prismjs/themes/prism.css';
+@import './animation.css';
+@import './tags.css';
+@import './blog-list.css';
+@import './media-queries.css';
+@import './utilities.css';
+
+:root {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
+}

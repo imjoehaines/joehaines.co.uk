@@ -1,0 +1,26 @@
+.blog-list {
+  padding: 0;
+  margin: 0 auto;
+  list-style-type: none;
+}
+
+.blog-list-item {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+
+}
+
+.blog-list-item:last-child {
+  border-bottom: none;
+}
+
+.blog-list-item__description {
+  color: #aaa;
+  margin: .5rem 0;
+}
+
+.blog-list-item__title {
+  margin: 0;
+  font-size: 1.2rem;
+}

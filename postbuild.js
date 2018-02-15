@@ -1,64 +1,39 @@
 const fs = require('fs')
+const glob = require('glob')
 const path = require('path')
 const util = require('util')
 const cssnano = require('cssnano')
 const postcss = require('postcss')
 const posthtml = require('posthtml')
-const removeTags = require('posthtml-remove-tags')
-const styleToFile = require('posthtml-style-to-file')
+const cssnext = require('postcss-cssnext')
+const postcssImport = require('postcss-import')
 const extendAttributes = require('posthtml-extend-attrs')
 
 const readFile = util.promisify(fs.readFile)
 const writeFile = util.promisify(fs.writeFile)
 
-const publicDirectory = path.join(__dirname, 'public')
-
-const processDirectory = (processor, directory, directoryPath) => {
-  directory
-    .reduce((acc, file) => {
-      const filePath = path.join(directoryPath, file)
-      const stat = fs.statSync(filePath)
-
-      if (stat.isDirectory()) {
-        processDirectory(processor, fs.readdirSync(filePath), filePath)
-
-        return acc
-      }
-
-      if (file.endsWith('.html')) {
-        return acc.concat(filePath)
-      }
-
-      return acc
-    }, [])
-    .forEach(async file => {
-      const { html } = await processor.process(await readFile(file))
-
-      writeFile(file, html)
-    })
-}
-
 ;(async _ => {
-  const styleFile = path.join(publicDirectory, 'style.min.css')
-
   const processor = posthtml()
-    .use(styleToFile({ path: styleFile }))
-    .use(removeTags({ tags: ['style'] }))
     .use(extendAttributes({ attrsTree: { html: { lang: 'en' } } }))
 
-  processDirectory(
-    processor,
-    fs.readdirSync(publicDirectory),
-    publicDirectory
-  )
+  // process every HTML file in `public`
+  glob.sync(path.join(__dirname, 'public/**/*.html')).forEach(async file => {
+    const { html } = await processor.process(await readFile(file))
 
-  const prismCssFile = path.join(__dirname, 'node_modules', 'prismjs', 'themes', 'prism.css')
+    writeFile(file, html)
+  })
 
-  const concatenatedStyles = await readFile(prismCssFile) + await readFile(styleFile)
+  const destinationFile = path.join(__dirname, 'public', 'style.min.css')
+  const sourceFile = path.join(__dirname, 'src', 'assets', 'css', 'index.css')
 
   const { css } = await postcss()
+    .use(postcssImport())
+    .use(cssnext())
     .use(cssnano({ preset: 'advanced' }))
-    .process(concatenatedStyles, { from: styleFile, to: styleFile })
+    .process(await readFile(sourceFile), {
+      from: sourceFile,
+      to: destinationFile
+    }).catch(err => console.error(err))
 
-  await writeFile(styleFile, css)
+  await writeFile(destinationFile, css)
 })()

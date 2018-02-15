@@ -13,12 +13,11 @@
     "react": "^16.2.0",
     "react-markdown": "^3.2.0",
     "react-router-dom": "^4.2.2",
-    "slug": "^0.9.1",
-    "styled-components": "^3.1.6"
+    "slug": "^0.9.1"
   },
   "scripts": {
     "prebuild": "node prebuild.js",
-    "build": "x0 build ./src/index.js --static --out-dir public --cssLibrary='styled-components'",
+    "build": "x0 build ./src/index.js --static --out-dir public",
     "postbuild": "node postbuild.js",
     "test": "standard | snazzy",
     "watch": "npm-watch"
@@ -38,12 +37,13 @@
   },
   "devDependencies": {
     "cssnano": "^3.10.0",
+    "glob": "^7.1.2",
     "npm-watch": "^0.3.0",
     "postcss": "^6.0.17",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-import": "^11.1.0",
     "posthtml": "^0.11.2",
     "posthtml-extend-attrs": "^1.0.0",
-    "posthtml-remove-tags": "^0.1.0",
-    "posthtml-style-to-file": "^0.1.1",
     "rimraf": "^2.6.2",
     "snazzy": "^7.0.0",
     "standard": "^10.0.3",

@@ -1,12 +1,8 @@
 import React from 'react'
-import { injectGlobal } from 'styled-components'
 import { StaticRouter, BrowserRouter } from 'react-router-dom'
 
 import App from './App'
 import getPosts from './util/get-posts'
-import globalStyles from './util/global-styles'
-
-injectGlobal`${globalStyles}`
 
 const Router = typeof document !== 'undefined'
   ? BrowserRouter

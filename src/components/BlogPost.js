@@ -3,34 +3,22 @@ import React, { Fragment } from 'react'
 
 import Code from './Code'
 import Date from './Date'
-import Link from './Link'
-import Small from './Small'
 import BlockQuote from './BlockQuote'
-import PrimaryHeading from './PrimaryHeading'
 
 export default ({ title, date, body }) =>
   <Fragment>
-    <PrimaryHeading>{title}</PrimaryHeading>
+    <h1>{title}</h1>
 
-    <Small>
+    <small>
       <Date date={date} />
-    </Small>
+    </small>
 
     <Markdown
       source={body}
-      renderers={{
-        link: Link,
-        blockquote: BlockQuote,
-        code: Code,
-        heading: props => {
-          const Heading = PrimaryHeading.withComponent(`h${props.level}`)
-
-          return <Heading {...props} />
-        }
-      }}
+      renderers={{ blockquote: BlockQuote, code: Code }}
     />
 
-    <Small>
-      <Link href='/'>&larr; back home</Link>
-    </Small>
+    <small>
+      <a href='/'>&larr; back home</a>
+    </small>
   </Fragment>

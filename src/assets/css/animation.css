@@ -1,0 +1,20 @@
+@keyframes wave {
+  0% {
+    transform: rotate(-5deg);
+  }
+
+  50%,
+  100% {
+    transform: rotate(5deg);
+  }
+}
+
+.wave {
+  display: inline-block;
+  animation: wave 800ms ease-in-out infinite alternate;
+  font-size: 80%;
+}
+
+body:hover .wave {
+  animation-play-state: paused;
+}

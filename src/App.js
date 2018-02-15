@@ -1,18 +1,8 @@
 import React, { Fragment } from 'react'
-import { Switch, Route } from 'react-router-dom'
+import { Link, Route, Switch } from 'react-router-dom'
 
-import Date from './components/Date'
-import Small from './components/Small'
-import Footer from './components/Footer'
-import Header from './components/Header'
-import Waving from './components/Waving'
-import BlogList from './components/BlogList'
 import BlogPost from './components/BlogPost'
-import BlockLink from './components/BlockLink'
-import BlogTitle from './components/BlogTitle'
-import BlogListItem from './components/BlogListItem'
-import PrimaryHeading from './components/PrimaryHeading'
-import BlogDescription from './components/BlogDescription'
+import DateComponent from './components/Date'
 
 export default ({ basename, pathname, posts }) => (
   <Fragment>
@@ -22,25 +12,23 @@ export default ({ basename, pathname, posts }) => (
         path='/'
         render={_ =>
           <Fragment>
-            <Header>
-              <PrimaryHeading>Joe Haines <Waving>👋</Waving></PrimaryHeading>
-            </Header>
+            <header>
+              <h1>Joe Haines <span className='wave'>👋</span></h1>
+            </header>
 
-            <BlogList>
+            <ul className='blog-list'>
               {posts.map(post =>
-                <BlogListItem key={post.slug}>
-                  <BlockLink to={post.slug}>
-                    <BlogTitle>{post.title}</BlogTitle>
+                <li key={post.slug} className='blog-list-item'>
+                  <Link to={post.slug} className='block text-decoration-none'>
+                    <h2 className='blog-list-item__title'>{post.title}</h2>
 
-                    <BlogDescription>{post.description}</BlogDescription>
+                    <p className='blog-list-item__description'>{post.description}</p>
 
-                    <Small>
-                      <Date date={post.date} />
-                    </Small>
-                  </BlockLink>
-                </BlogListItem>
+                    <small><DateComponent date={post.date} /></small>
+                  </Link>
+                </li>
               )}
-            </BlogList>
+            </ul>
           </Fragment>
         }
       />
@@ -53,6 +41,10 @@ export default ({ basename, pathname, posts }) => (
       )}
     </Switch>
 
-    <Footer />
+    <footer>
+      <small>
+        &copy; {(new Date()).getFullYear()} Joe Haines
+      </small>
+    </footer>
   </Fragment>
 )

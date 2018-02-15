@@ -1,0 +1,56 @@
+html {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  min-height: 100vh;
+}
+
+body {
+  margin: 0 auto;
+  min-width: 20vw;
+  max-width: 35vw;
+}
+
+a {
+  color: rgb(0, 127, 173);
+  text-decoration-skip: ink;
+  text-decoration-color: rgba(0, 127, 173, .5);
+}
+
+a:hover,
+a:focus {
+  color: rgb(0, 94, 128);
+  text-decoration-color: rgba(0, 94, 128, .5);
+}
+
+blockquote {
+  margin: 1rem 2rem;
+}
+
+footer {
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  margin: 1rem 0 0;
+}
+
+header {
+  margin-bottom: 4rem;
+}
+
+small {
+  font-size: .8rem;
+  color: #bbb;
+}
+
+time {
+  color: #aaa;
+}
