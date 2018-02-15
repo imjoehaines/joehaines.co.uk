@@ -1,9 +1,9 @@
-import fs from 'fs'
-import path from 'path'
-import slug from 'slug'
-import frontMatter from 'front-matter'
+const fs = require('fs')
+const path = require('path')
+const slug = require('slug')
+const frontMatter = require('front-matter')
 
-export default root =>
+module.exports = root =>
   fs.readdirSync(path.join(root, 'posts')).reverse().map(filename => {
     const contents = fs.readFileSync(path.join(root, 'posts', filename)).toString()
     const { attributes: { title, description }, body } = frontMatter(contents)

@@ -1,9 +1,8 @@
-const fs = require('fs')
 const path = require('path')
-const slug = require('slug')
 const rimraf = require('rimraf')
-const frontMatter = require('front-matter')
 const updateJsonFile = require('update-json-file')
+
+const getPosts = require('./src/util/get-posts')
 
 // cleanup the exiting public directory
 require('./package.json').x0.routes
@@ -14,12 +13,7 @@ require('./package.json').x0.routes
     err => { if (err) throw err }
   ))
 
-const slugs = fs.readdirSync(path.join(__dirname, 'src', 'posts')).reverse().map(filename => {
-  const contents = fs.readFileSync(path.join(__dirname, 'src', 'posts', filename)).toString()
-  const { attributes: { title } } = frontMatter(contents)
-
-  return '/' + slug(title, { lower: true })
-})
+const slugs = getPosts(path.join(__dirname, 'src')).map(({ slug }) => `/${slug}`)
 
 updateJsonFile(path.join(__dirname, 'package.json'), data => {
   // always add the home page!
