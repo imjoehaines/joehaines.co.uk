@@ -38,6 +38,7 @@
     ]
   },
   "devDependencies": {
+    "copy-dir": "^0.3.0",
     "cssnano": "^3.10.0",
     "glob": "^7.1.2",
     "npm-watch": "^0.3.0",
