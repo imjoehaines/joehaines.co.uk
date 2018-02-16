@@ -43,7 +43,7 @@ h4,
 h5,
 h6 {
   font-weight: normal;
-  margin: 1rem 0 0;
+  margin: 2rem 0 0;
 }
 
 h1 {
@@ -71,6 +71,14 @@ h6 {
   font-weight: bold;
 }
 
+h1 + h2,
+h2 + h3,
+h3 + h4,
+h4 + h5,
+h5 + h6 {
+  margin-top: 1rem;
+}
+
 header {
   margin-bottom: 4rem;
 }
@@ -79,6 +87,7 @@ hr {
   border: 0;
   height: 0;
   border-bottom: 1px solid rgb(242, 242, 242);
+  margin: 2rem 0;
 }
 
 small {
@@ -90,6 +99,7 @@ table {
   width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
+  margin: 1rem 0;
 }
 
 th {
