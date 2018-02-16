@@ -3,6 +3,7 @@ import React, { Fragment } from 'react'
 
 import Code from './Code'
 import Date from './Date'
+import TableCell from './TableCell'
 import BlockQuote from './BlockQuote'
 
 export default ({ title, date, body }) =>
@@ -15,7 +16,11 @@ export default ({ title, date, body }) =>
 
     <Markdown
       source={body}
-      renderers={{ blockquote: BlockQuote, code: Code }}
+      renderers={{
+        blockquote: BlockQuote,
+        code: Code,
+        tableCell: TableCell
+      }}
     />
 
     <small>
