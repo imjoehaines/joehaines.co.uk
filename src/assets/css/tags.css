@@ -31,11 +31,6 @@ code {
   font-size: 85%;
 }
 
-/* code tags that don't have Prism syntax highlighting */
-code:not([class^="language-"]) {
-  padding: 2px 4px;
-}
-
 footer {
   margin-top: 4rem;
   margin-bottom: 1rem;

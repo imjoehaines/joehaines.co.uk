@@ -6,6 +6,7 @@ import Date from './Date'
 import Image from './Image'
 import TableCell from './TableCell'
 import BlockQuote from './BlockQuote'
+import InlineCode from './InlineCode'
 
 export default ({ title, date, body }) =>
   <Fragment>
@@ -19,6 +20,7 @@ export default ({ title, date, body }) =>
       source={body}
       renderers={{
         blockquote: BlockQuote,
+        inlineCode: InlineCode,
         code: Code,
         tableCell: TableCell,
         image: Image

@@ -1,12 +1,13 @@
 @import 'prismjs/themes/prism.css';
 @import 'normalize.css/normalize.css';
 
-@import './prism-overrides.css';
 @import './animation.css';
-@import './tags.css';
 @import './blog-list.css';
+@import './code.css';
 @import './images.css';
+@import './tags.css';
 @import './utilities.css';
+
 @import './media-queries.css';
 
 :root {
