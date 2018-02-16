@@ -3,6 +3,7 @@ import React, { Fragment } from 'react'
 
 import Code from './Code'
 import Date from './Date'
+import Image from './Image'
 import TableCell from './TableCell'
 import BlockQuote from './BlockQuote'
 
@@ -19,7 +20,8 @@ export default ({ title, date, body }) =>
       renderers={{
         blockquote: BlockQuote,
         code: Code,
-        tableCell: TableCell
+        tableCell: TableCell,
+        image: Image
       }}
     />
 

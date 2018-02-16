@@ -1,5 +1,17 @@
-@media (max-width: 550px) {
+@media (max-width: 1000px) {
+  .image--large {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+  }
+}
+
+@media (max-width: 500px) {
   body {
     width: 95vw;
+  }
+
+  .image--medium {
+    max-width: 100vw;
+    margin-left: -2.5vw;
   }
 }

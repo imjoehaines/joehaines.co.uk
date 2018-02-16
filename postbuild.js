@@ -2,11 +2,9 @@ const fs = require('fs')
 const glob = require('glob')
 const path = require('path')
 const util = require('util')
-const rimraf = require('rimraf')
 const cssnano = require('cssnano')
 const postcss = require('postcss')
 const posthtml = require('posthtml')
-const copyDirectory = require('copy-dir')
 const cssnext = require('postcss-cssnext')
 const postcssImport = require('postcss-import')
 const extendAttributes = require('posthtml-extend-attrs')
@@ -38,14 +36,4 @@ const writeFile = util.promisify(fs.writeFile)
     }).catch(err => console.error(err))
 
   await writeFile(destinationFile, css)
-
-  rimraf(path.join(__dirname, 'public', 'images', '*'), err => {
-    if (err) throw err
-
-    copyDirectory(
-      path.join(__dirname, 'src', 'assets', 'images'),
-      path.join(__dirname, 'public', 'images'),
-      err => { if (err) throw err }
-    )
-  })
 })()

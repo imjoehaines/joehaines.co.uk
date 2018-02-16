@@ -1,0 +1,23 @@
+img {
+  display: block;
+}
+
+.image--small {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.image--medium {
+  width: 500px;
+  margin-left: 0;
+}
+
+.image--large {
+  width: 1000px;
+  margin-left: -250px;
+}
+
+.image--fullwidth {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+}

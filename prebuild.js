@@ -1,5 +1,6 @@
 const path = require('path')
 const rimraf = require('rimraf')
+const copyDirectory = require('copy-dir')
 const updateJsonFile = require('update-json-file')
 
 const getPosts = require('./src/util/get-posts')
@@ -21,3 +22,10 @@ updateJsonFile(path.join(__dirname, 'package.json'), data => {
 
   return data
 }, { indent: 2 })
+
+rimraf.sync(path.join(__dirname, 'public', 'images', '*'))
+
+copyDirectory.sync(
+  path.join(__dirname, 'src', 'assets', 'images'),
+  path.join(__dirname, 'public', 'images')
+)
