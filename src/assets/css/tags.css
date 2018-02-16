@@ -36,14 +36,6 @@ code:not([class^="language-"]) {
   padding: 2px 4px;
 }
 
-/* Prism selector override and code tags without Prism */
-pre[class*=language-],
-code:not([class^="language-"]),
-:not(pre) > code[class*=language-] {
-  background-color: rgb(242, 242, 242);
-  border-radius: 4px;
-}
-
 footer {
   margin-top: 4rem;
   margin-bottom: 1rem;

@@ -1,6 +1,7 @@
 @import 'prismjs/themes/prism.css';
 @import 'normalize.css/normalize.css';
 
+@import './prism-overrides.css';
 @import './animation.css';
 @import './tags.css';
 @import './blog-list.css';
@@ -11,4 +12,8 @@
 :root {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #333;
+}
+
+* {
+  box-sizing: border-box;
 }

@@ -5,9 +5,14 @@
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 560px) {
   body {
     width: 95vw;
+  }
+
+  pre[class^=language-] {
+    width: 100%;
+    margin-left: 0;
   }
 
   .image--medium {
