@@ -17,11 +17,3 @@
   padding: 2px 4px !important; /* Prism JS override */
   margin: 0 2px;
 }
-
-.code--inline:first-child {
-  margin-left: 0;
-}
-
-.code--inline:last-child {
-  margin-right: 0;
-}
