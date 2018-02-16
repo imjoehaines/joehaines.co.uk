@@ -14,6 +14,11 @@
   body {
     max-width: 50vw;
   }
+
+  td,
+  th {
+    padding: .5rem .7rem;
+  }
 }
 
 @media (max-width: 650px) {
@@ -25,6 +30,11 @@
 @media (max-width: 500px) {
   body {
     max-width: 80vw;
+  }
+
+  td,
+  th {
+    padding: .2rem .4rem;
   }
 }
 

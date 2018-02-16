@@ -4,8 +4,8 @@
 @import './animation.css';
 @import './tags.css';
 @import './blog-list.css';
-@import './media-queries.css';
 @import './utilities.css';
+@import './media-queries.css';
 
 :root {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
