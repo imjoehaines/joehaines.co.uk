@@ -119,12 +119,14 @@ table {
 
 th {
   font-weight: bold;
+  border-bottom: 1px solid rgb(242, 242, 242);
 }
 
 th,
 td {
   padding: .8rem 1rem;
   text-align: left;
+  border-right: 1px solid rgb(242, 242, 242);
 }
 
 th:first-child,
@@ -135,4 +137,5 @@ td:first-child {
 th:last-child,
 td:last-child {
   padding-right: 0;
+  border-right: none;
 }
