@@ -1,11 +1,7 @@
 .code {
-  background-color: rgb(242, 242, 242) !important; /* Prism JS override */
-  border-radius: 4px;
-}
-
-.code,
-.code .token {
-  text-shadow: none !important; /* Prism JS override */
+  background-color: rgb(250, 250, 250) !important; /* Prism JS override */
+  border: none !important; /* Prism JS override */
+  border-radius: 4px !important; /* Prism JS override */
 }
 
 .code--block {
