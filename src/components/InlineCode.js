@@ -1,6 +1,7 @@
 import React from 'react'
-import highlight from '../util/highlight'
 import classifier from 'language-classifier'
+
+import highlight from '../util/highlight'
 
 export default ({ value }) => {
   const language = classifier(value)
