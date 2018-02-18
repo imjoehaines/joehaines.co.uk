@@ -3,8 +3,8 @@
   border-radius: 4px;
 }
 
-.code .token,
-.language-none {
+.code,
+.code .token {
   text-shadow: none !important; /* Prism JS override */
 }
 
