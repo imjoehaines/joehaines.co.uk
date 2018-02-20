@@ -3,6 +3,7 @@ import React, { Fragment } from 'react'
 
 import Code from './Code'
 import Date from './Date'
+import Link from './Link'
 import Image from './Image'
 import TableCell from './TableCell'
 import BlockQuote from './BlockQuote'
@@ -23,7 +24,8 @@ export default ({ title, date, body }) =>
         inlineCode: InlineCode,
         code: Code,
         tableCell: TableCell,
-        image: Image
+        image: Image,
+        link: Link
       }}
     />
 
