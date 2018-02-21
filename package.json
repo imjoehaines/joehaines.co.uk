@@ -54,7 +54,7 @@
     "posthtml-extend-attrs": "^1.0.0",
     "rimraf": "^2.6.2",
     "snazzy": "^7.0.0",
-    "standard": "^10.0.3",
+    "standard": "^11.0.0",
     "update-json-file": "^1.1.1"
   }
 }
