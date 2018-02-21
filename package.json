@@ -19,6 +19,7 @@
     "slug": "^0.9.1"
   },
   "scripts": {
+    "start": "node server.js",
     "prebuild": "node prebuild.js",
     "build": "x0 build ./src/index.js --static --out-dir public",
     "postbuild": "node postbuild.js",
@@ -42,7 +43,9 @@
   "devDependencies": {
     "copy-dir": "^0.3.0",
     "cssnano": "^3.10.0",
+    "express": "^4.16.2",
     "glob": "^7.1.2",
+    "morgan": "^1.9.0",
     "npm-watch": "^0.3.0",
     "postcss": "^6.0.17",
     "postcss-cssnext": "^3.1.0",
