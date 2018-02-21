@@ -1,25 +1,5 @@
 img {
   display: block;
-  margin: 1rem 0;
-}
-
-.image--small {
+  margin: 1rem auto;
   max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.image--medium {
-  width: 500px;
-  margin-left: 0;
-}
-
-.image--large {
-  width: 1000px;
-  margin-left: -250px;
-}
-
-.image--fullwidth {
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
 }

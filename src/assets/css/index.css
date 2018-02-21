@@ -12,8 +12,15 @@
 @import './media-queries.css';
 
 :root {
+  --dark: #333;
+  --mid: #4a4a4a;
+  --light: #757575;
+  --lightest: #f2f2f2;
+  --brand: #007fad;
+  --brand-highlight: #005e80;
+
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #333;
+  color: var(--dark);
 }
 
 * {
