@@ -5,12 +5,13 @@ html {
   min-height: 100vh;
   background: #f4f5f5;
   line-height: 1.5;
+  font-size: 18px;
 }
 
 body {
   margin: 2rem auto;
   padding: 2rem;
-  width: 564px;
+  width: 35rem;
   overflow-x: hidden;
   background: #fff;
   box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, .1);
