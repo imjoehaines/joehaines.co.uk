@@ -1,9 +1,6 @@
 .code {
   font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  tab-size: 8;
-  hyphens: none;
   background-color: color(var(--lightest) alpha(40%));
-  border: none;
   border-radius: .25rem;
   line-height: 1.5;
 }
@@ -11,6 +8,8 @@
 .code--block {
   padding: 1rem;
   overflow: auto;
+  hyphens: none;
+  tab-size: 8;
 }
 
 .code--inline {
