@@ -1,10 +1,10 @@
 @import 'normalize.css/normalize.css';
 
-@import './prism-github-theme.css';
+@import './prism-theme.css';
+@import './code.css';
 
 @import './animation.css';
 @import './blog-list.css';
-@import './code.css';
 @import './images.css';
 @import './tags.css';
 @import './utilities.css';

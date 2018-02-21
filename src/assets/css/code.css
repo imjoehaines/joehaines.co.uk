@@ -1,10 +1,19 @@
 .code {
-  background-color: color(var(--lightest) alpha(40%)) !important; /* Prism JS override */
-  border: none !important; /* Prism JS override */
-  border-radius: 4px !important; /* Prism JS override */
-  line-height: 1.5 !important; /* Prism JS override */
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  white-space: pre;
+  tab-size: 8;
+  hyphens: none;
+  background-color: color(var(--lightest) alpha(40%));
+  border: none;
+  border-radius: 4px;
+  line-height: 1.5;
+}
+
+.code--block {
+  padding: 1rem;
+  overflow: auto;
 }
 
 .code--inline {
-  padding: 2px 4px !important; /* Prism JS override */
+  padding: 2px 4px;
 }
