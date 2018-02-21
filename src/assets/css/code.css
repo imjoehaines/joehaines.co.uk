@@ -1,6 +1,5 @@
 .code {
   font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  white-space: pre;
   tab-size: 8;
   hyphens: none;
   background-color: color(var(--lightest) alpha(40%));
