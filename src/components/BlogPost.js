@@ -1,5 +1,5 @@
+import React from 'react'
 import Markdown from 'react-markdown'
-import React, { Fragment } from 'react'
 
 import Code from './Code'
 import Date from './Date'
@@ -8,8 +8,8 @@ import TableCell from './TableCell'
 import BlockQuote from './BlockQuote'
 import InlineCode from './InlineCode'
 
-export default ({ title, date, body }) =>
-  <Fragment>
+export default ({ title, date, body, previousLink, previousText, nextLink, nextText }) =>
+  <article>
     <header>
       <h1>{title}</h1>
 
@@ -29,7 +29,13 @@ export default ({ title, date, body }) =>
       }}
     />
 
-    <small>
-      <a href='/'>&larr; back home</a>
-    </small>
-  </Fragment>
+    <footer className='blog-post__footer'>
+      {previousLink &&
+        <Link className='button blog-post__navigation-button' href={previousLink}>&larr; {previousText}</Link>
+      }
+
+      {nextLink &&
+        <Link className='button blog-post__navigation-button' href={nextLink}>{nextText} &rarr;</Link>
+      }
+    </footer>
+  </article>

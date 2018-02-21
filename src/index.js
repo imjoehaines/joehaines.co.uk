@@ -29,11 +29,19 @@ export default ({ basename, pathname }) =>
             path='/'
             render={_ => <BlogPostList posts={posts} />}
           />
-          {posts.map(post =>
+          {posts.map((post, i) =>
             <Route
               key={post.slug}
               path={'/' + post.slug}
-              render={_ => <BlogPost {...post} />}
+              render={_ =>
+                <BlogPost
+                  {...post}
+                  previousLink={posts[i - 1] && ('/' + posts[i - 1].slug)}
+                  previousText={posts[i - 1] && posts[i - 1].title}
+                  nextLink={posts[i + 1] && ('/' + posts[i + 1].slug)}
+                  nextText={posts[i + 1] && posts[i + 1].title}
+                />
+              }
             />
           )}
         </Switch>
