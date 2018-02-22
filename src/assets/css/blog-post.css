@@ -3,15 +3,6 @@
   justify-content: space-between;
 }
 
-.blog-post__navigation-button {
-  flex: 1;
-  margin: 0 1rem;
-}
-
-.blog-post__navigation-button:first-child {
-  margin-left: 0;
-}
-
-.blog-post__navigation-button:last-child {
-  margin-right: 0;
+.blog-post__navigation--next {
+  margin-left: auto;
 }

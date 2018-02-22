@@ -31,11 +31,11 @@ export default ({ title, date, body, previousLink, previousText, nextLink, nextT
 
     <footer className='blog-post__footer'>
       {previousLink &&
-        <Link className='button blog-post__navigation-button' href={previousLink}>&larr;&nbsp;{previousText}</Link>
+        <Link className='button' href={previousLink}>&larr;&nbsp;{previousText}</Link>
       }
 
       {nextLink &&
-        <Link className='button blog-post__navigation-button' href={nextLink}>{nextText}&nbsp;&rarr;</Link>
+        <Link className='button blog-post__navigation--next' href={nextLink}>{nextText}&nbsp;&rarr;</Link>
       }
     </footer>
   </article>
