@@ -95,17 +95,13 @@ header {
 hr {
   border: 0;
   height: 0;
-  border-bottom: 1px solid var(--lightest);
+  border-bottom: 1px solid var(--light);
   margin: 2rem 0;
-}
-
-p {
-  color: var(--mid);
 }
 
 small {
   font-size: .8rem;
-  color: #757575;
+  color: var(--mid);
 }
 
 table {
@@ -117,14 +113,14 @@ table {
 
 th {
   font-weight: bold;
-  border-bottom: 1px solid var(--lightest);
+  border-bottom: 1px solid var(--light);
 }
 
 th,
 td {
   padding: .8rem 1rem;
   text-align: left;
-  border-right: 1px solid var(--lightest);
+  border-right: 1px solid var(--light);
 }
 
 th:first-child,

@@ -5,7 +5,7 @@
 }
 
 .blog-list-item {
-  border-bottom: 1px solid var(--lightest);
+  border-bottom: 1px solid var(--light);
   margin-bottom: 1rem;
   padding-bottom: 1rem;
 }
@@ -17,7 +17,8 @@
 }
 
 .blog-list-item__description {
-  margin: .5rem 0;
+  margin: .5rem 0 0;
+  color: var(--dark);
 }
 
 .blog-list-item__title {
