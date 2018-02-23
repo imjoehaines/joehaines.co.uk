@@ -51,11 +51,6 @@
   color: #6f42c1;
 }
 
-/* ? */
-.token.entity {
-  cursor: help;
-}
-
 .token.inserted {
   background-color: #f0fff4;
   color: #22863a;
