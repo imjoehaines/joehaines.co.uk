@@ -1,8 +1,4 @@
 html {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  min-height: 100vh;
   background: #f4f5f5;
   line-height: 1.5;
   font-size: 18px;
