@@ -1,8 +1,3 @@
-.token.comment,
-.token.blockquote {
-  color: #6a737d;
-}
-
 .token.doctype,
 .token.punctuation,
 .token.variable,
@@ -61,18 +56,6 @@
   cursor: help;
 }
 
-/* ? */
-.token.title,
-.token.title .token.punctuation {
-  font-weight: bold;
-  color: #1d3e81;
-}
-
-/* ? */
-.token.list {
-  color: #ed6a43;
-}
-
 .token.inserted {
   background-color: #f0fff4;
   color: #22863a;
@@ -83,14 +66,27 @@
   color: #b31d28;
 }
 
-/* ? */
+/* markdown things */
 .token.bold {
   font-weight: bold;
 }
 
-/* ? */
 .token.italic {
   font-style: italic;
+}
+
+.token.comment,
+.token.blockquote {
+  opacity: .75;
+}
+
+.token.title {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
 }
 
 /* language specific styles */
