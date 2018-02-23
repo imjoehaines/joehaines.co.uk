@@ -1,6 +1,7 @@
 import React from 'react'
 import { Route, StaticRouter, Switch } from 'react-router-dom'
 
+import Link from './components/Link'
 import getPosts from './util/get-posts'
 import BlogPost from './components/BlogPost'
 import BlogPostList from './components/BlogPostList'
@@ -29,18 +30,26 @@ export default ({ basename, pathname }) =>
             path='/'
             render={_ => <BlogPostList posts={posts} />}
           />
-          {posts.map(post =>
+          {posts.map((post, i) =>
             <Route
               key={post.slug}
               path={'/' + post.slug}
-              render={_ => <BlogPost {...post} />}
+              render={_ =>
+                <BlogPost
+                  {...post}
+                  previousLink={posts[i + 1] && ('/' + posts[i + 1].slug)}
+                  previousText={posts[i + 1] && posts[i + 1].title}
+                  nextLink={posts[i - 1] && ('/' + posts[i - 1].slug)}
+                  nextText={posts[i - 1] && posts[i - 1].title}
+                />
+              }
             />
           )}
         </Switch>
 
         <footer>
           <small>
-            &copy; {new Date().getFullYear()} Joe Haines
+            &copy; {new Date().getFullYear()} <Link href='/'>Joe Haines</Link>
           </small>
         </footer>
       </body>

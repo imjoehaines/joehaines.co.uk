@@ -1,0 +1,16 @@
+.button {
+  text-decoration: none;
+  border: 1px solid var(--brand);
+  color: var(--brand);
+  padding: .5rem 1rem;
+  border-radius: .25rem;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button:hover,
+.button:focus {
+  border-color: currentColor;
+}

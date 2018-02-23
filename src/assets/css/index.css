@@ -1,10 +1,11 @@
 @import 'normalize.css/normalize.css';
 
-@import './prism-github-theme.css';
-
-@import './animation.css';
-@import './blog-list.css';
+@import './prism-theme.css';
 @import './code.css';
+
+@import './blog-list.css';
+@import './blog-post.css';
+@import './buttons.css';
 @import './images.css';
 @import './tags.css';
 @import './utilities.css';
@@ -12,8 +13,14 @@
 @import './media-queries.css';
 
 :root {
+  --dark: #333;
+  --mid: #757575;
+  --light: #f2f2f2;
+  --brand: #007fad;
+  --brand-highlight: #005e80;
+
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #333;
+  color: var(--dark);
 }
 
 * {
