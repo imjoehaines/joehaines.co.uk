@@ -3,4 +3,6 @@
 !_redirects
 !.gitignore
 !robots.txt
+!admin/
+!admin/*
 !/images
