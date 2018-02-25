@@ -7,6 +7,7 @@ const postcss = require('postcss')
 const posthtml = require('posthtml')
 const cssnext = require('postcss-cssnext')
 const postcssImport = require('postcss-import')
+const generateSitemap = require('sitemap-static')
 const extendAttributes = require('posthtml-extend-attrs')
 
 const readFile = util.promisify(fs.readFile)
@@ -36,4 +37,18 @@ const writeFile = util.promisify(fs.writeFile)
     }).catch(err => console.error(err))
 
   await writeFile(destinationFile, css)
+
+  console.log('Generating sitemap...')
+
+  const writer = fs.createWriteStream(path.join(__dirname, 'public', 'sitemap.xml'))
+
+  generateSitemap(writer, {
+    findRoot: path.join(__dirname, 'public'),
+    prefix: 'https://www.joehaines.co.uk/',
+    pretty: true
+  })
+
+  writer.on('finish', _ => {
+    console.log('Sitemap generated!')
+  })
 })()
