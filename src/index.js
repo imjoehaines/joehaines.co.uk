@@ -29,7 +29,7 @@ export default ({ basename, pathname }) =>
           key={post.slug}
           path={'/' + post.slug}
           render={_ =>
-            <PageWrapper title={post.title}>
+            <PageWrapper title={post.title} description={`${post.title} - ${post.description}`}>
               <BlogPost
                 {...post}
                 previousLink={posts[i + 1] && ('/' + posts[i + 1].slug)}
