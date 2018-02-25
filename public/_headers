@@ -6,7 +6,7 @@
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
 /admin/*
-  Content-Security-Policy: default-src 'none'; script-src https://identity.netlify.com/v1/netlify-identity-widget.js;style-src 'self'; img-src 'self' https://*.cloudfront.net; base-uri 'self'; form-action 'none'; frame-ancestors 'none'; block-all-mixed-content; require-sri-for script
+  Content-Security-Policy: default-src https: 'unsafe-eval' 'unsafe-inline'; object-src 'none'
   Referrer-Policy: strict-origin-when-cross-origin
   Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
   X-Content-Type-Options: nosniff
