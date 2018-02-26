@@ -2,11 +2,23 @@ import React, { Fragment } from 'react'
 import { Link as ReactRouterLink } from 'react-router-dom'
 
 import Date from './Date'
+import formatReadingTime from '../util/format-reading-time'
 
 export default ({ posts }) =>
   <Fragment>
     <header>
       <h1>Joe Haines</h1>
+
+      <small>
+        <Date date={new global.Date()} /> (last updated)
+      </small>
+
+      <small className='pull-right'>
+        {formatReadingTime(posts.reduce(
+          (totalTime, { readingTime }) => totalTime + readingTime,
+          0
+        ))} minute read
+      </small>
     </header>
 
     <ul className='blog-list'>
@@ -26,7 +38,7 @@ export default ({ posts }) =>
             </small>
 
             <small className='pull-right'>
-              {readingTime}
+              {formatReadingTime(readingTime)} minute read
             </small>
           </ReactRouterLink>
         </li>

@@ -13,7 +13,7 @@ module.exports = root =>
       title,
       description,
       date: new Date(path.basename(filename, '.md')),
-      readingTime: readingTime(body).text.replace('min', 'minute'),
+      readingTime: readingTime(body).minutes,
       body,
       slug: slug(title, { lower: true })
     }

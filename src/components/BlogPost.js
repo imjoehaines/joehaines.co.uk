@@ -7,6 +7,7 @@ import Link from './Link'
 import TableCell from './TableCell'
 import BlockQuote from './BlockQuote'
 import InlineCode from './InlineCode'
+import formatReadingTime from '../util/format-reading-time'
 
 export default ({ title, date, readingTime, body, previousLink, previousText, nextLink, nextText }) =>
   <article>
@@ -18,7 +19,7 @@ export default ({ title, date, readingTime, body, previousLink, previousText, ne
       </small>
 
       <small className='pull-right'>
-        {readingTime}
+        {formatReadingTime(readingTime)} minute read
       </small>
     </header>
 

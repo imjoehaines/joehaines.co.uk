@@ -36,6 +36,7 @@
   "x0": {
     "routes": [
       "/",
+      "/decorators",
       "/using-x0-as-a-blog-system",
       "/hello-world",
       "/markdown-test"
