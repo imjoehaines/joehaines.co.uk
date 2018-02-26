@@ -14,10 +14,11 @@ export default ({ posts }) =>
       </small>
 
       <small className='pull-right'>
-        {formatReadingTime(posts.reduce(
-          (totalTime, { readingTime }) => totalTime + readingTime,
-          0
-        ))} minute read
+        {posts
+          .map(({ readingTime }) => readingTime)
+          .map(formatReadingTime)
+          .reduce((totalTime, readingTime) => totalTime + readingTime, 0)
+        } minute read
       </small>
     </header>
 
