@@ -20,6 +20,9 @@
 
   .blog-post__navigation--next {
     margin-left: 0;
+  }
+
+  .blog-post__navigation--next:not(:only-child) {
     margin-top: 1rem;
   }
 }
