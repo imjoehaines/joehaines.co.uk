@@ -14,7 +14,7 @@ app.use(express.static(root, {
     const headersFileContents = fs.readFileSync(path.join(root, '_headers')).toString()
 
     const headers = headersFileContents.split('\n')
-      .filter((_, i) => i !== 0)
+      .filter((_, i) => i !== 0 && i < 7)
       .map(header => header.trim())
       .filter(header => !!header)
 
