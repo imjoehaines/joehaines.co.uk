@@ -10,14 +10,24 @@ export default ({ posts }) =>
     </header>
 
     <ul className='blog-list'>
-      {posts.map(post =>
-        <li key={post.slug} className='blog-list-item'>
-          <ReactRouterLink to={post.slug} className='block text-decoration-none'>
-            <h2 className='blog-list-item__title'>{post.title}</h2>
+      {posts.map(({ slug, title, description, date, readingTime }) =>
+        <li key={slug} className='blog-list-item'>
+          <ReactRouterLink to={slug} className='block text-decoration-none'>
+            <h2 className='blog-list-item__title'>
+              {title}
+            </h2>
 
-            <p className='blog-list-item__description'>{post.description}</p>
+            <p className='blog-list-item__description'>
+              {description}
+            </p>
 
-            <small><Date date={post.date} /></small>
+            <small>
+              <Date date={date} />
+            </small>
+
+            <small className='pull-right'>
+              {readingTime}
+            </small>
           </ReactRouterLink>
         </li>
       )}
