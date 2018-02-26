@@ -1,5 +1,5 @@
 /*
-  Content-Security-Policy: default-src 'none'; script-src 'sha256-5+KTYvtzNwgrPDl5Q2epeQJYbXgmYrZdP2+udciIqhs=' 'sha256-0dkc3ppMKbkq8Y9rjBRXojfW6dwWmbCfvK7D3JYJAUM=' https://identity.netlify.com/v1/netlify-identity-widget.js; style-src 'self' 'sha256-jj/RZ/gcaakU0XL2hHMFmJf/Cn3SYkaUFA5PR1Zw7+o=' 'sha256-jILZY2UBo/ux6K6qGHntQonoJYNQZfxdLrszRmDpc/o='; img-src 'self' https://*.cloudfront.net; base-uri 'self'; form-action 'none'; frame-ancestors 'none'; block-all-mixed-content
+  Content-Security-Policy: default-src 'none'; script-src 'sha256-5+KTYvtzNwgrPDl5Q2epeQJYbXgmYrZdP2+udciIqhs=' 'sha256-0dkc3ppMKbkq8Y9rjBRXojfW6dwWmbCfvK7D3JYJAUM=' https://identity.netlify.com/v1/netlify-identity-widget.js; style-src 'self' 'sha256-jj/RZ/gcaakU0XL2hHMFmJf/Cn3SYkaUFA5PR1Zw7+o=' 'sha256-jILZY2UBo/ux6K6qGHntQonoJYNQZfxdLrszRmDpc/o='; img-src 'self' https://*.cloudfront.net data:; base-uri 'self'; form-action 'none'; frame-ancestors 'none'; block-all-mixed-content
   Referrer-Policy: strict-origin-when-cross-origin
   Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
   X-Content-Type-Options: nosniff
