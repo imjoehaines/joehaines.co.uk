@@ -18,6 +18,11 @@
   text-align: right;
 }
 
-.pull-right {
-  float: right;
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.m-t-1\/2 {
+  margin-top: .5rem;
 }

@@ -14,13 +14,15 @@ export default ({ title, date, readingTime, body, previousLink, previousText, ne
     <header>
       <h1>{title}</h1>
 
-      <small>
-        <Date date={date} />
-      </small>
+      <div className='flex m-t-1/2'>
+        <small>
+          <Date date={date} />
+        </small>
 
-      <small className='pull-right'>
-        {formatReadingTime(readingTime)} minute read
-      </small>
+        <small className='pull-right'>
+          {formatReadingTime(readingTime)} minute read
+        </small>
+      </div>
     </header>
 
     <Markdown
