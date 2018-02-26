@@ -20,10 +20,11 @@
 
   .blog-post__navigation--next {
     margin-left: 0;
+    order: -1;
   }
 
   .blog-post__navigation--next:not(:only-child) {
-    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
 }
 
