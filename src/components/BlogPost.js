@@ -8,13 +8,17 @@ import TableCell from './TableCell'
 import BlockQuote from './BlockQuote'
 import InlineCode from './InlineCode'
 
-export default ({ title, date, body, previousLink, previousText, nextLink, nextText }) =>
+export default ({ title, date, readingTime, body, previousLink, previousText, nextLink, nextText }) =>
   <article>
     <header>
       <h1>{title}</h1>
 
       <small>
         <Date date={date} />
+      </small>
+
+      <small className='pull-right'>
+        {readingTime}
       </small>
     </header>
 
