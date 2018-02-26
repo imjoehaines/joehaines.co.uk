@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Date from './date'
+import Date from './Date'
 import formatReadingTime from '../util/format-reading-time'
 
 export default ({ readingTime, date = '', description = '' }) =>
