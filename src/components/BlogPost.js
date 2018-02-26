@@ -27,7 +27,7 @@ export default ({ title, date, readingTime, body, previousLink, previousText, ne
       }}
     />
 
-    <footer className='blog-post__footer'>
+    <footer className='blog-post__footer flex'>
       {previousLink &&
         <Link className='button' href={previousLink}>&larr;&nbsp;{previousText}</Link>
       }
