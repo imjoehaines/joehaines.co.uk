@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import { Link as ReactRouterLink } from 'react-router-dom'
 
-import Date from './Date'
+import PostInformation from './PostInformation'
 import formatReadingTime from '../util/format-reading-time'
 
 export default ({ posts }) =>
@@ -9,19 +9,15 @@ export default ({ posts }) =>
     <header>
       <h1>Joe Haines</h1>
 
-      <div className='flex m-t-1/2'>
-        <small>
-          Software developer from the UK
-        </small>
-
-        <small className='pull-right'>
-          {posts
+      <PostInformation
+        description='Software developer from the UK'
+        readingTime={
+          posts
             .map(({ readingTime }) => readingTime)
             .map(formatReadingTime)
             .reduce((totalTime, readingTime) => totalTime + readingTime, 0)
-          } minute read
-        </small>
-      </div>
+        }
+      />
     </header>
 
     <ul className='blog-list'>
@@ -36,15 +32,7 @@ export default ({ posts }) =>
               {description}
             </p>
 
-            <div className='flex m-t-1/2'>
-              <small>
-                <Date date={date} />
-              </small>
-
-              <small className='pull-right'>
-                {formatReadingTime(readingTime)} minute read
-              </small>
-            </div>
+            <PostInformation date={date} readingTime={readingTime} />
           </ReactRouterLink>
         </li>
       )}

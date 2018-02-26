@@ -2,27 +2,18 @@ import React from 'react'
 import Markdown from 'react-markdown'
 
 import Code from './Code'
-import Date from './Date'
 import Link from './Link'
 import TableCell from './TableCell'
 import BlockQuote from './BlockQuote'
 import InlineCode from './InlineCode'
-import formatReadingTime from '../util/format-reading-time'
+import PostInformation from './PostInformation'
 
 export default ({ title, date, readingTime, body, previousLink, previousText, nextLink, nextText }) =>
   <article>
     <header>
       <h1>{title}</h1>
 
-      <div className='flex m-t-1/2'>
-        <small>
-          <Date date={date} />
-        </small>
-
-        <small className='pull-right'>
-          {formatReadingTime(readingTime)} minute read
-        </small>
-      </div>
+      <PostInformation date={date} readingTime={readingTime} />
     </header>
 
     <Markdown
