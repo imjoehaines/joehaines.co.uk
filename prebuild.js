@@ -8,6 +8,7 @@ const getPosts = require('./src/util/get-posts')
 // cleanup the exiting public directory
 require('./package.json').x0.routes
   .filter(slug => slug !== '/')
+  .filter(slug => slug !== '/404')
   .map(slug => slug.replace('/', ''))
   .forEach(slug => rimraf(
     path.join(__dirname, 'public', slug),
@@ -17,8 +18,8 @@ require('./package.json').x0.routes
 const slugs = getPosts(path.join(__dirname, 'src')).map(({ slug }) => `/${slug}`)
 
 updateJsonFile(path.join(__dirname, 'package.json'), data => {
-  // always add the home page!
-  data.x0.routes = ['/'].concat(slugs)
+  // always add the home and 404 pages!
+  data.x0.routes = ['/', '/404'].concat(slugs)
 
   return data
 }, { indent: 2 })

@@ -26,4 +26,10 @@ app.use(express.static(root, {
   }
 }))
 
+app.use(function (req, res, next) {
+  const html = fs.readFileSync(path.join(root, '404/index.html')).toString()
+
+  res.status(404).send(html)
+})
+
 app.listen(3000, _ => console.log('Running on port 3000'))

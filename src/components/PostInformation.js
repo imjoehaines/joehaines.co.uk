@@ -3,7 +3,7 @@ import React from 'react'
 import Date from './Date'
 import formatReadingTime from '../util/format-reading-time'
 
-export default ({ readingTime, date = '', description = '' }) =>
+export default ({ readingTime = '', date = '', description = '' }) =>
   <div className='flex m-t-1/2'>
     {description &&
       <small>
@@ -17,7 +17,9 @@ export default ({ readingTime, date = '', description = '' }) =>
       </small>
     }
 
-    <small>
-      {formatReadingTime(readingTime)} minute read
-    </small>
+    {readingTime &&
+      <small>
+        {formatReadingTime(readingTime)} minute read
+      </small>
+    }
   </div>

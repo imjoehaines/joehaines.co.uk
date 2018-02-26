@@ -2,6 +2,7 @@ const fs = require('fs')
 const glob = require('glob')
 const path = require('path')
 const util = require('util')
+const rimraf = require('rimraf')
 const cssnano = require('cssnano')
 const postcss = require('postcss')
 const posthtml = require('posthtml')
@@ -51,4 +52,12 @@ const writeFile = util.promisify(fs.writeFile)
   writer.on('finish', _ => {
     console.log('Sitemap generated!')
   })
+
+  // move the 404 page so Netlify can find it
+  fs.renameSync(
+    path.join(__dirname, 'public', '404', 'index.html'),
+    path.join(__dirname, 'public', '404.html')
+  )
+
+  rimraf.sync(path.join(__dirname, 'public', '404'))
 })()

@@ -5,6 +5,7 @@ import getPosts from './util/get-posts'
 import BlogPost from './components/BlogPost'
 import PageWrapper from './components/PageWrapper'
 import BlogPostList from './components/BlogPostList'
+import NotFoundPage from './components/NotFoundPage'
 
 const posts = getPosts(__dirname)
 
@@ -41,5 +42,13 @@ export default ({ basename, pathname }) =>
           }
         />
       )}
+      <Route
+        path='*'
+        render={_ =>
+          <PageWrapper>
+            <NotFoundPage />
+          </PageWrapper>
+        }
+      />
     </Switch>
   </StaticRouter>
