@@ -33,6 +33,11 @@
       "extensions": "css,js,md"
     }
   },
+  "browserslist": [
+    "> 2% in GB",
+    "last 2 versions",
+    "not IE < 11"
+  ],
   "x0": {
     "routes": [
       "/",
