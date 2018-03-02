@@ -31,8 +31,12 @@ blockquote {
   margin: 1rem 2rem;
 }
 
+pre,
 code {
-  font-family: Menlo, Consolas, Courier, monospace;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+code {
   font-size: 85%;
 }
 

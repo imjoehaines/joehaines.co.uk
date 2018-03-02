@@ -1,5 +1,4 @@
 .code {
-  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
   background-color: color(var(--light) alpha(40%));
   border-radius: .25rem;
   line-height: 1.5;
