@@ -5,4 +5,6 @@
 !robots.txt
 !admin/
 !admin/*
-!/images
+!images
+!images/*
+images/.DS_Store
