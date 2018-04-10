@@ -27,7 +27,7 @@ app.use(express.static(root, {
 }))
 
 app.use(function (req, res, next) {
-  const html = fs.readFileSync(path.join(root, '404/index.html')).toString()
+  const html = fs.readFileSync(path.join(root, '404.html')).toString()
 
   res.status(404).send(html)
 })
