@@ -3,6 +3,7 @@ import Markdown from 'react-markdown'
 
 import Code from './Code'
 import Link from './Link'
+import Heading from './Heading'
 import TableCell from './TableCell'
 import BlockQuote from './BlockQuote'
 import InlineCode from './InlineCode'
@@ -17,13 +18,15 @@ export default ({ title, date, readingTime, body, previousLink, previousText, ne
     </header>
 
     <Markdown
+      className='blog-post__body'
       source={body}
       renderers={{
         blockquote: BlockQuote,
         inlineCode: InlineCode,
         code: Code,
         tableCell: TableCell,
-        link: Link
+        link: Link,
+        heading: Heading
       }}
     />
 

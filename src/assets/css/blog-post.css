@@ -1,3 +1,19 @@
 .blog-post__navigation--next {
   margin-left: auto;
 }
+
+.blog-post__body {
+  position: relative;
+}
+
+.blog-post__heading-anchor::before {
+  content: '\00a7';
+  position: absolute;
+  left: -1rem;
+  padding-right: .3rem;
+  visibility: hidden;
+}
+
+.blog-post__heading:hover .blog-post__heading-anchor::before {
+  visibility: visible;
+}
