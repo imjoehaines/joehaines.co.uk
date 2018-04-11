@@ -15,14 +15,21 @@
   /* make the heading extra wide (100% + 2rem padding-left + 2rem padding-right) */
   /* this lets the hover show the anchor when hovering over the right padding on <body> */
   width: calc(100% + 4rem);
+
+  display: flex;
+  align-items: center;
+}
+
+.blog-post__heading-anchor {
+  margin-left: -2rem;
+  font-size: 1rem;
+  width: 1rem;
+  height: 1rem;
+  padding: 0 1rem;
 }
 
 .blog-post__heading-anchor::before {
   content: '\00a7';
-  position: absolute;
-  left: -2rem;
-  padding-left: 1rem;
-  padding-right: .3rem;
   visibility: hidden;
 }
 
