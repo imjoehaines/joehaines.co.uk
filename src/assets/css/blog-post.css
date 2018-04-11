@@ -6,6 +6,17 @@
   position: relative;
 }
 
+.blog-post__heading {
+  /* pull headings to the left but use padding to fill it out again */
+  /* this lets the hover show the anchor when hovering over the left padding on <body> */
+  margin-left: -2rem;
+  padding-left: 2rem;
+
+  /* make the heading extra wide (100% + 2rem padding-left + 2rem padding-right) */
+  /* this lets the hover show the anchor when hovering over the right padding on <body> */
+  width: calc(100% + 4rem);
+}
+
 .blog-post__heading-anchor::before {
   content: '\00a7';
   position: absolute;
