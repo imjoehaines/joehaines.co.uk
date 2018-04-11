@@ -20,7 +20,8 @@
 .blog-post__heading-anchor::before {
   content: '\00a7';
   position: absolute;
-  left: -1rem;
+  left: -2rem;
+  padding-left: 1rem;
   padding-right: .3rem;
   visibility: hidden;
 }
