@@ -42,6 +42,7 @@
     "routes": [
       "/",
       "/404",
+      "/autodux",
       "/decorators",
       "/using-x0-as-a-blog-system",
       "/hello-world",
