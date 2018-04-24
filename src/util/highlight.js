@@ -14,7 +14,8 @@ const dependencies = new Map([
   ['objectivec', 'c'],
   ['opencl', 'c'],
   ['scala', 'java'],
-  ['vbnet', 'basic']
+  ['vbnet', 'basic'],
+  ['php', 'markup-templating']
 ])
 
 export default (text, language) => {
