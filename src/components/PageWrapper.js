@@ -7,6 +7,9 @@ export default ({ children, description = '', title = '' }) =>
     <head>
       <meta charSet='utf-8' />
       <meta name='viewport' content='width=device-width, initial-scale=1' />
+
+      {/* https://iconmonstr.com/code-2-png/ */}
+      <link rel='icon' type='image/png' href='/favicon.png' />
       <link rel='stylesheet' href='/style.min.css' />
 
       <meta
