@@ -3,7 +3,7 @@ import React from 'react'
 import hash from 'object-hash'
 
 export default ({ level, children, ...props }) => {
-  const headingSlug = typeof children === 'string'
+  const headingSlug = typeof children[0] === 'string' && children.length === 1
     ? slug(children, { lower: true })
     : hash(children)
 
