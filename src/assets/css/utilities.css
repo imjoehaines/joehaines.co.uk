@@ -16,6 +16,7 @@
 
 .align-right {
   text-align: right;
+  font-variant-numeric: tabular-nums;
 }
 
 .flex {
