@@ -1,8 +1,12 @@
 import slug from 'slug'
 import React from 'react'
+import hash from 'object-hash'
 
 export default ({ level, children, ...props }) => {
-  const headingSlug = slug(children, { lower: true })
+  const headingSlug = typeof children === 'string'
+    ? slug(children, { lower: true })
+    : hash(children)
+
   const Heading = `h${level}`
 
   return (
