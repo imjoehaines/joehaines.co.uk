@@ -91,7 +91,7 @@ header {
 hr {
   border: 0;
   height: 0;
-  border-bottom: 1px solid var(--light);
+  border-bottom: 1px solid var(--mid);
   margin: 2rem 0;
 }
 
@@ -109,14 +109,14 @@ table {
 
 th {
   font-weight: bold;
-  border-bottom: 1px solid var(--light);
+  border-bottom: 1px solid var(--mid);
 }
 
 th,
 td {
   padding: .8rem 1rem;
   text-align: left;
-  border-right: 1px solid var(--light);
+  border-right: 1px solid var(--mid);
 }
 
 th:first-child,
