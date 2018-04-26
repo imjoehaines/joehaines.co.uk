@@ -23,7 +23,5 @@
   padding: .25rem .5rem;
   content: attr(data-language);
   text-transform: uppercase;
-  color: #fff;
-  background-color: var(--brand);
-  font-weight: bold;
+  background-color: var(--light;);
 }
