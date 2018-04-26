@@ -11,11 +11,13 @@ export default ({ language, value }) => {
   }
 
   return (
-    <pre className={`language-${language} code code--block`}>
-      <code
-        className={`language-${language}`}
-        dangerouslySetInnerHTML={{ __html: highlight(value, language) }}
-      />
-    </pre>
+    <div data-language={language} className='relative'>
+      <pre className={`language-${language} code code--block`}>
+        <code
+          className={`language-${language}`}
+          dangerouslySetInnerHTML={{ __html: highlight(value, language) }}
+        />
+      </pre>
+    </div>
   )
 }

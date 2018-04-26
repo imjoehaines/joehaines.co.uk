@@ -27,3 +27,7 @@
 .m-t-1\/2 {
   margin-top: .5rem;
 }
+
+.relative {
+  position: relative;
+}
