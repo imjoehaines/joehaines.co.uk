@@ -1,7 +1,6 @@
 html {
-  background: #f4f5f5;
   line-height: 1.5;
-  font-size: 18px;
+  font-size: 24px;
 }
 
 body {
@@ -9,10 +8,6 @@ body {
   padding: 2rem;
   width: 35rem;
   overflow-x: hidden;
-  background: #fff;
-  box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, .1);
-  border-radius: .25rem;
-  border-top: .5rem solid var(--brand);
 }
 
 a {
@@ -52,28 +47,28 @@ h6 {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 3rem;
   margin-top: 0;
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 h3 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 }
 
 h4 {
-  font-size: 1.15rem;
+  font-size: 1.25rem;
 }
 
 h5 {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
 }
 
 h6 {
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 h1 + h2,

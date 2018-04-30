@@ -6,20 +6,16 @@ import formatReadingTime from '../util/format-reading-time'
 export default ({ readingTime = '', date = '', description = '' }) =>
   <div className='flex m-t-1/2'>
     {description &&
-      <small>
+      <span class='description'>
         {description}
-      </small>
+      </span>
     }
 
-    {date &&
-      <small>
-        <Date date={date} />
-      </small>
-    }
+    {date && <Date date={date} />}
 
     {readingTime &&
-      <small>
+      <span className='reading-time'>
         {formatReadingTime(readingTime)} minute read
-      </small>
+      </span>
     }
   </div>

@@ -36,3 +36,13 @@
 .blog-post__heading:hover .blog-post__heading-anchor::before {
   visibility: visible;
 }
+
+.date-time,
+.description,
+.reading-time {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.reading-time {
+  display: none;
+}

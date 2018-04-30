@@ -1,7 +1,6 @@
 .code {
   line-height: 1.5;
-  border-radius: .25rem;
-  box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+  border: 1px solid rgba(0, 0, 0, .1);
 }
 
 .code--block {
@@ -9,6 +8,8 @@
   overflow: auto;
   hyphens: none;
   tab-size: 8;
+  margin-left: -3rem;
+  width: calc(100% + 6rem);
 }
 
 .code--inline {
@@ -17,11 +18,12 @@
 
 [data-language]::before {
   position: absolute;
-  right: 0;
-  top: 0;
-  border-bottom-left-radius: .25rem;
+  right: calc(-3rem + 1px);
+  top: 1px;
   padding: .25rem .5rem;
   content: attr(data-language);
   text-transform: uppercase;
-  background-color: var(--light;);
+  background-color: rgba(0, 0, 0, .05);
+  border-left: 1px solid rgba(0, 0, 0, .1);
+  border-bottom: 1px solid rgba(0, 0, 0, .1)
 }
