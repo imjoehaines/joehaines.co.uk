@@ -1,8 +1,4 @@
-@media (max-width: 40rem) {
-  html {
-    font-size: 16px
-  }
-
+@media (max-width: 680px) {
   body {
     width: calc(100vw - 2rem);
     padding: 1.5rem;
@@ -28,7 +24,11 @@
   }
 }
 
-@media (max-width: 20rem) {
+@media (max-width: 500px) {
+  html {
+    font-size: 16px;
+  }
+
   body {
     width: 100vw;
     min-height: 100vh;
