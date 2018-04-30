@@ -11,7 +11,7 @@ export default ({ children }) => {
   }
 
   return (
-    <blockquote cite={cite}>
+    <blockquote>
       {children}
 
       <p className='align-right'>
