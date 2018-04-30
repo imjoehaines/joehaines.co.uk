@@ -22,7 +22,8 @@ const writeFile = util.promisify(fs.writeFile)
   glob.sync(path.join(__dirname, 'public/**/*.html')).forEach(async file => {
     const { html } = await processor.process(await readFile(file))
 
-    writeFile(file, html)
+    // ugly hack to remove an extra UTF-8 charset that x0 puts in for us :(
+    writeFile(file, html.replace(/^<!DOCTYPE html><meta charset="utf-8">/, '<!DOCTYPE html>'))
   })
 
   const destinationFile = path.join(__dirname, 'public', 'style.min.css')
