@@ -23,15 +23,11 @@ export default ({ posts }) =>
     <ul className='blog-list'>
       {posts.map(({ slug, title, description, date, readingTime }) =>
         <li key={slug} className='blog-list-item'>
-          <ReactRouterLink to={slug} className='block'>
-            <h2 className='blog-list-item__title'>
+          <h2 className='blog-list-item__title'>
+            <ReactRouterLink to={slug}>
               {title}
-            </h2>
-
-            <p className='blog-list-item__description'>
-              {description}
-            </p>
-          </ReactRouterLink>
+            </ReactRouterLink>
+          </h2>
 
           <PostInformation date={date} readingTime={readingTime} />
         </li>

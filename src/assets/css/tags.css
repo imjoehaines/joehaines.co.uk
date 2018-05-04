@@ -6,7 +6,7 @@ html {
 body {
   margin: 2rem auto;
   padding: 2rem;
-  width: 35rem;
+  max-width: 35rem;
   overflow-x: hidden;
 }
 
@@ -86,7 +86,7 @@ header {
 hr {
   border: 0;
   height: 0;
-  border-bottom: 1px solid var(--mid);
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
   margin: 2rem 0;
 }
 
@@ -108,14 +108,14 @@ table {
 
 th {
   font-weight: bold;
-  border-bottom: 1px solid var(--mid);
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
 }
 
 th,
 td {
   padding: .8rem 1rem;
   text-align: left;
-  border-right: 1px solid var(--mid);
+  border-right: 1px solid rgba(0, 0, 0, .1);
 }
 
 th:first-child,

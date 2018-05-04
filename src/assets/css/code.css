@@ -8,22 +8,21 @@
   overflow: auto;
   hyphens: none;
   tab-size: 8;
-  margin-left: -3rem;
-  width: calc(100% + 6rem);
+  width: 100%;
 }
 
 .code--inline {
-  padding: .125rem .25rem;
+  padding: 0 .25rem;
 }
 
 [data-language]::before {
   position: absolute;
-  right: calc(-3rem + 1px);
+  right: 1px;
   top: 1px;
   padding: .25rem .5rem;
   content: attr(data-language);
   text-transform: uppercase;
   background-color: rgba(0, 0, 0, .05);
-  border-left: 1px solid rgba(0, 0, 0, .1);
-  border-bottom: 1px solid rgba(0, 0, 0, .1)
+  border-left: 1px solid rgba(0, 0, 0, .05);
+  border-bottom: 1px solid rgba(0, 0, 0, .05)
 }
