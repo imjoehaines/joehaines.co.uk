@@ -1,15 +1,20 @@
 const fs = require('fs')
+const Feed = require('feed')
 const glob = require('glob')
 const path = require('path')
 const util = require('util')
+const remark = require('remark')
 const rimraf = require('rimraf')
 const cssnano = require('cssnano')
 const postcss = require('postcss')
 const posthtml = require('posthtml')
+const remarkHtml = require('remark-html')
 const cssnext = require('postcss-cssnext')
 const postcssImport = require('postcss-import')
 const generateSitemap = require('sitemap-static')
 const extendAttributes = require('posthtml-extend-attrs')
+
+const getPosts = require('./src/util/get-posts')
 
 const readFile = util.promisify(fs.readFile)
 const writeFile = util.promisify(fs.writeFile)
@@ -61,4 +66,74 @@ const writeFile = util.promisify(fs.writeFile)
   )
 
   rimraf.sync(path.join(__dirname, 'public', '404'))
+  rimraf.sync(path.join(__dirname, 'public', 'feed.xml'))
+  rimraf.sync(path.join(__dirname, 'public', 'feed.json'))
+  rimraf.sync(path.join(__dirname, 'public', 'feed.atom'))
+
+  // create RSS feed
+
+  const posts = getPosts(path.join(__dirname, 'src'))
+
+  const updated = posts.reduce(
+    (latestUpdate, post) => post.date > latestUpdate ? post.date : latestUpdate,
+    new Date(2018, 0, 1)
+  )
+
+  const feed = new Feed({
+    updated,
+    title: 'Joe Haines',
+    description: 'Software developer from the UK',
+    id: 'https://www.joehaines.co.uk/',
+    link: 'https://www.joehaines.co.uk/',
+    image: 'https://www.joehaines.co.uk/favicon.png',
+    favicon: 'https://www.joehaines.co.uk/favicon.png',
+    copyright: '© 2018 Joe Haines',
+    generator: 'Feed for Node.js',
+    feedLinks: {
+      json: 'http://joehaines.co.uk/feed.json',
+      atom: 'http://joehaines.co.uk/feed.atom'
+    },
+    author: {
+      name: 'Joe Haines',
+      email: 'hello@joehaines.co.uk',
+      link: 'https://www.joehaines.co.uk'
+    }
+  })
+
+  posts.forEach(({ title, description, date, body, slug }) => {
+    remark()
+      .use(remarkHtml)
+      .process(body, (err, content) => {
+        if (err) throw err
+
+        feed.addItem(({
+          title,
+          description,
+          date,
+          content,
+          id: slug,
+          link: `https://www.joehaines.co.uk/${slug}`,
+          author: [{
+            name: 'Joe Haines',
+            email: 'hello@joehaines.co.uk',
+            link: 'https://www.joehaines.co.uk'
+          }]
+        }))
+      })
+  })
+
+  writeFile(
+    path.join(__dirname, 'public', 'feed.xml'),
+    feed.rss2()
+  )
+
+  writeFile(
+    path.join(__dirname, 'public', 'feed.json'),
+    feed.json1()
+  )
+
+  writeFile(
+    path.join(__dirname, 'public', 'feed.atom'),
+    feed.atom1()
+  )
 })()

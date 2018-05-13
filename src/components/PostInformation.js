@@ -6,7 +6,7 @@ import formatReadingTime from '../util/format-reading-time'
 export default ({ readingTime = '', date = '', description = '' }) =>
   <div className='flex m-t-1/2'>
     {description &&
-      <span class='description'>
+      <span className='description'>
         {description}
       </span>
     }
