@@ -1,4 +1,5 @@
 import React from 'react'
+import { Home, ArrowLeft, ArrowRight } from 'react-feather'
 import Markdown from 'react-markdown'
 
 import Code from './Code'
@@ -12,7 +13,13 @@ import PostInformation from './PostInformation'
 export default ({ title, date, readingTime, body, previousLink, previousText, nextLink, nextText }) =>
   <article>
     <header>
-      <h1>{title}</h1>
+      <div className='flex'>
+        <h1>{title}</h1>
+
+        <Link href='/'>
+          <Home />
+        </Link>
+      </div>
 
       <PostInformation date={date} readingTime={readingTime} />
     </header>
@@ -32,11 +39,19 @@ export default ({ title, date, readingTime, body, previousLink, previousText, ne
 
     <footer className='blog-post__footer flex'>
       {previousLink &&
-        <Link className='button' href={previousLink}>&larr;&nbsp;{previousText}</Link>
+        <Link className='button' href={previousLink}>
+          <ArrowLeft size={20} />
+
+          {previousText}
+        </Link>
       }
 
       {nextLink &&
-        <Link className='button blog-post__navigation--next' href={nextLink}>{nextText}&nbsp;&rarr;</Link>
+        <Link className='button blog-post__navigation--next' href={nextLink}>
+          {nextText}
+
+          <ArrowRight size={20} />
+        </Link>
       }
     </footer>
   </article>

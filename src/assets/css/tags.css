@@ -91,7 +91,7 @@ small {
 }
 
 svg {
-  fill: currentColor;
+  stroke: currentColor;
 }
 
 table {
