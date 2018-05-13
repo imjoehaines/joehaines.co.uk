@@ -13,6 +13,10 @@ export default ({ children, description = '', title = '' }) =>
       <link rel='icon' type='image/png' href='/favicon.png' />
       <link rel='stylesheet' href='/style.min.css' />
 
+      <link rel='alternate' title='Joe Haines' type='application/rss+xml' href='/feed.xml' />
+      <link rel='alternate' title='Joe Haines' type='application/json' href='/feed.json' />
+      <link rel='alternate' title='Joe Haines' type='application/atom+xml' href='/feed.atom' />
+
       <meta
         name='description'
         content={`Joe Haines, software developer from the UK${description && ` - ${description}`}`}
