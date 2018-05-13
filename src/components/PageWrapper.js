@@ -1,4 +1,5 @@
 import React from 'react'
+import { Rss } from 'react-feather'
 
 import Link from './Link'
 
@@ -24,9 +25,17 @@ export default ({ children, description = '', title = '' }) =>
       {children}
 
       <footer>
-        <small>
-          &copy; {new Date().getFullYear()} <Link href='/'>Joe Haines</Link>
-        </small>
+        <div className='flex'>
+          <small>
+            &copy; {new Date().getFullYear()} <Link href='/'>Joe Haines</Link>
+          </small>
+
+          <small>
+            <Link href='/feed.xml'>
+              RSS feed<span class='m-l-1/4'><Rss size={16} /></span>
+            </Link>
+          </small>
+        </div>
       </footer>
     </body>
   </html>
