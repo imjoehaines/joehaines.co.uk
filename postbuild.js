@@ -103,14 +103,14 @@ const writeFile = util.promisify(fs.writeFile)
   posts.forEach(({ title, description, date, body, slug }) => {
     remark()
       .use(remarkHtml)
-      .process(body, (err, content) => {
+      .process(body, (err, { contents }) => {
         if (err) throw err
 
         feed.addItem(({
           title,
           description,
           date,
-          content,
+          content: contents,
           id: slug,
           link: `https://www.joehaines.co.uk/${slug}`,
           author: [{
