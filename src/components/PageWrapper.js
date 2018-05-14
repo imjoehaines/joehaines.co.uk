@@ -36,7 +36,7 @@ export default ({ children, description = '', title = '' }) =>
 
           <small>
             <Link href='/feed.xml'>
-              RSS feed<span class='m-l-1/4'><Rss size={16} /></span>
+              RSS feed<span className='m-l-1/4'><Rss size={16} /></span>
             </Link>
           </small>
         </div>
