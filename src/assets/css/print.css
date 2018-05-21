@@ -1,0 +1,42 @@
+@media print {
+  :root  {
+    font-size: 14px;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    max-width: unset;
+  }
+
+  /* hover styles are included because if you hover a link and print it stays */
+  /* the hover colour */
+  a,
+  a:hover {
+    color: unset;
+    text-decoration: none;
+  }
+
+  a[href^="http"]::after {
+    content: ' (' attr(href) ')';
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 4;
+    widows: 4;
+  }
+
+  /* hide home icon, footer, blog post navigation links */
+  footer,
+  .header__home-icon,
+  .blog-post__footer {
+    display: none;
+  }
+
+  .code,
+  [data-language]::before {
+    border: none;
+  }
+}

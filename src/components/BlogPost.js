@@ -16,7 +16,7 @@ export default ({ title, date, readingTime, body, previousLink, previousText, ne
       <div className='flex'>
         <h1>{title}</h1>
 
-        <Link href='/'>
+        <Link href='/' className='header__home-icon'>
           <Home />
         </Link>
       </div>

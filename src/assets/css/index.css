@@ -11,20 +11,4 @@
 @import './utilities.css';
 
 @import './media-queries.css';
-
-:root {
-  --dark: #333;
-  --mid: #757575;
-  --light: #f2f2f2;
-  --brand: hsla(211, 90%, 49%, 1);
-  --brand-highlight: hsla(211, 90%, 39%, 1);
-
-  font-family: BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-size: 20px;
-  color: var(--dark);
-}
-
-* {
-  box-sizing: border-box;
-}
+@import './print.css';
