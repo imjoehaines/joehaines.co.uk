@@ -58,6 +58,7 @@
     "express": "^4.16.2",
     "glob": "^7.1.2",
     "morgan": "^1.9.0",
+    "node-notifier": "^5.2.1",
     "npm-watch": "^0.3.0",
     "postcss": "^6.0.17",
     "postcss-cssnext": "^3.1.0",

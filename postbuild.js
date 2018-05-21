@@ -10,6 +10,7 @@ const postcss = require('postcss')
 const posthtml = require('posthtml')
 const remarkHtml = require('remark-html')
 const cssnext = require('postcss-cssnext')
+const notifier = require('node-notifier')
 const postcssImport = require('postcss-import')
 const generateSitemap = require('sitemap-static')
 const extendAttributes = require('posthtml-extend-attrs')
@@ -122,18 +123,25 @@ const writeFile = util.promisify(fs.writeFile)
       })
   })
 
-  writeFile(
+  const xmlFeed = writeFile(
     path.join(__dirname, 'public', 'feed.xml'),
     feed.rss2()
   )
 
-  writeFile(
+  const jsonFeed = writeFile(
     path.join(__dirname, 'public', 'feed.json'),
     feed.json1()
   )
 
-  writeFile(
+  const atomFeed = writeFile(
     path.join(__dirname, 'public', 'feed.atom'),
     feed.atom1()
   )
+
+  await Promise.all([xmlFeed, jsonFeed, atomFeed])
+
+  notifier.notify({
+    title: 'Build complete!',
+    message: '✨'.repeat(17)
+  })
 })()
