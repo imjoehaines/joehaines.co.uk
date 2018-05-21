@@ -11,7 +11,7 @@ export default ({ language, value }) => {
   }
 
   return (
-    <div data-language={language} className='relative overflow-hidden'>
+    <div data-language={language} className='relative overflow-hidden m-t-1'>
       <pre className={`language-${language} code code--block`}>
         <code
           className={`language-${language}`}
