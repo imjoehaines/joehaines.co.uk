@@ -1,7 +1,7 @@
 :root {
   --dark: #333;
   --mid: #757575;
-  --light: #f2f2f2;
+  --light: gray(229);
   --brand: hsla(211, 90%, 49%, 1);
   --brand-highlight: hsla(211, 90%, 39%, 1);
 
@@ -98,7 +98,7 @@ header {
 hr {
   border: 0;
   height: 0;
-  border-bottom: 1px solid rgba(0, 0, 0, .1);
+  border-bottom: 4px solid var(--light);
   margin: 2rem 0;
 }
 
@@ -120,14 +120,14 @@ table {
 
 th {
   font-weight: bold;
-  border-bottom: 1px solid rgba(0, 0, 0, .1);
+  border-bottom: 2px solid var(--light);
 }
 
 th,
 td {
   padding: .8rem 1rem;
   text-align: left;
-  border-right: 1px solid rgba(0, 0, 0, .1);
+  border-right: 2px solid var(--light);
 }
 
 th:first-child,

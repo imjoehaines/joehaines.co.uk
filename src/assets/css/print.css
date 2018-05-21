@@ -57,6 +57,7 @@
 
   .code {
     border: none;
+    padding-top: 1rem;
   }
 
   .code--inline {
