@@ -1,1 +1,5 @@
 language: crystal
+
+after_success:
+  - npm install netlify-cli -g
+  - netlify deploy -s $NETLIFY_SITE_ID -t $NETLIFY_ACCESS_TOKEN -p ./public
