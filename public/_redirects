@@ -1,0 +1,5 @@
+# Redirect domain aliases to primary domain
+https://joehaines.uk/* https://www.joehaines.co.uk/:splat 301!
+https://www.joehaines.uk/* https://www.joehaines.co.uk/:splat 301!
+https://joehaines.netlify.com/* https://www.joehaines.co.uk/:splat 301!
+https://www.joehaines.netlify.com/* https://www.joehaines.co.uk/:splat 301!
