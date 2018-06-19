@@ -1,0 +1,13 @@
+name: Www
+version: 0.1.0
+
+authors:
+  - Joe Haines <hello@joehaines.co.uk>
+
+targets:
+  www:
+    main: src/www.cr
+
+crystal: 0.25.0
+
+license: Unlicense

@@ -1,1 +1,0 @@
-sitemap: https://www.joehaines.co.uk/sitemap.xml
