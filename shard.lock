@@ -1,0 +1,10 @@
+version: 1.0
+shards:
+  front_matter:
+    github: chris-huxtable/front_matter.cr
+    version: 0.1.0
+
+  markd:
+    github: icyleaf/markd
+    version: 0.1.1
+
