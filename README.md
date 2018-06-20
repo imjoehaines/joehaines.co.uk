@@ -1,27 +1,3 @@
-# JoeHaines.co.uk
+Abandoned as Netlify cannot run Crystal code on it's CD servers and it doesn't allow deploys to any non-live version of a site.
 
-TODO: Write a description here
-
-## Installation
-
-TODO: Write installation instructions here
-
-## Usage
-
-TODO: Write usage instructions here
-
-## Development
-
-TODO: Write development instructions here
-
-## Contributing
-
-1. Fork it (<https://github.com/imjoehaines/./fork>)
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
-
-## Contributors
-
-- [imjoehaines](https://github.com/imjoehaines) Joe Haines - creator, maintainer
+Still here as reference for future Crystal stuff.
