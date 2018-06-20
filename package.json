@@ -44,7 +44,7 @@
   },
   "scripts": {
     "start": "node server.js",
-    "build": "babel-node scripts/build.js",
+    "build": "babel-node build/index.js",
     "test": "standard | snazzy",
     "watch": "npm-watch"
   },
