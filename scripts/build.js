@@ -16,15 +16,17 @@ import PageWrapper from '../src/components/PageWrapper'
 import BlogPostList from '../src/components/BlogPostList'
 import NotFoundPage from '../src/components/NotFoundPage'
 
-rimraf.sync(path.join(__dirname, '..', 'public', 'images', '*'))
+const root = path.join(__dirname, '..')
+
+rimraf.sync(path.join(root, 'public', 'images', '*'))
 
 copyDirectory.sync(
-  path.join(__dirname, '..', 'src', 'assets', 'images'),
-  path.join(__dirname, '..', 'public', 'images')
+  path.join(root, 'src', 'assets', 'images'),
+  path.join(root, 'public', 'images')
 )
 
-const publicDirectory = path.join(__dirname, '..', 'public')
-const posts = getPosts(path.join(__dirname, '..', 'posts'))
+const publicDirectory = path.join(root, 'public')
+const posts = getPosts(path.join(root, 'posts'))
 
 const homePage = renderToStaticMarkup(
   <PageWrapper>
