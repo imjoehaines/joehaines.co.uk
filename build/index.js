@@ -1,5 +1,4 @@
 // TODO RSS feeds
-// TODO CSS compilation
 // TODO sitemap
 // TODO modularise some
 // TODO make async
@@ -9,6 +8,7 @@ import path from 'path'
 import getPosts from '../src/util/get-posts'
 
 import copyImages from './copy-images'
+import compileCss from './compile-css'
 import createPostPage from './create-post-page'
 import createStaticPages from './create-static-pages'
 
@@ -22,3 +22,8 @@ copyImages(root, publicDirectory)
 createStaticPages(posts, publicDirectory)
 
 posts.forEach(createPostPage(publicDirectory))
+
+compileCss(
+  path.join(__dirname, '..', 'src', 'assets', 'css', 'index.css'),
+  path.join(publicDirectory, 'style.min.css')
+)
