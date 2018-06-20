@@ -1,4 +1,3 @@
-// TODO 404 page
 // TODO RSS feeds
 // TODO CSS compilation
 // TODO sitemap
@@ -15,6 +14,7 @@ import getPosts from '../src/util/get-posts'
 import BlogPost from '../src/components/BlogPost'
 import PageWrapper from '../src/components/PageWrapper'
 import BlogPostList from '../src/components/BlogPostList'
+import NotFoundPage from '../src/components/NotFoundPage'
 
 rimraf.sync(path.join(__dirname, '..', 'public', 'images', '*'))
 
@@ -32,7 +32,14 @@ const homePage = renderToStaticMarkup(
   </PageWrapper>
 )
 
+const notFoundPage = renderToStaticMarkup(
+  <PageWrapper>
+    <NotFoundPage />
+  </PageWrapper>
+)
+
 fs.writeFileSync(path.join(publicDirectory, 'index.html'), homePage)
+fs.writeFileSync(path.join(publicDirectory, '404.html'), notFoundPage)
 
 posts.forEach((post, i) => {
   const directory = path.join(publicDirectory, post.slug)
