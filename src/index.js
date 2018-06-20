@@ -7,7 +7,7 @@ import PageWrapper from './components/PageWrapper'
 import BlogPostList from './components/BlogPostList'
 import NotFoundPage from './components/NotFoundPage'
 
-const posts = getPosts(__dirname)
+const posts = getPosts(__dirname + '/../posts')
 
 export default ({ basename, pathname }) =>
   <StaticRouter

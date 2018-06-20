@@ -1,3 +1,5 @@
+// TODO delete this file, most of it is not required
+
 const fs = require('fs')
 const Feed = require('feed')
 const glob = require('glob')
@@ -15,7 +17,7 @@ const postcssImport = require('postcss-import')
 const generateSitemap = require('sitemap-static')
 const extendAttributes = require('posthtml-extend-attrs')
 
-const getPosts = require('./src/util/get-posts')
+const getPosts = require('../src/util/get-posts')
 
 const readFile = util.promisify(fs.readFile)
 const writeFile = util.promisify(fs.writeFile)
@@ -73,7 +75,7 @@ const writeFile = util.promisify(fs.writeFile)
 
   // create RSS feed
 
-  const posts = getPosts(path.join(__dirname, 'src'))
+  const posts = getPosts(path.join(__dirname, '..', 'posts'))
 
   const updated = posts.reduce(
     (latestUpdate, post) => post.date > latestUpdate ? post.date : latestUpdate,
