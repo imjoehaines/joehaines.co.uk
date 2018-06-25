@@ -6,7 +6,7 @@
   "author": "Joe Haines <hello@joehaines.co.uk>",
   "license": "MIT",
   "dependencies": {
-    "@compositor/x0": "^4.0.0",
+    "@compositor/x0": "^6.0.0",
     "date-fns": "^1.29.0",
     "feed": "^1.1.1",
     "front-matter": "^2.3.0",
