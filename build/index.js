@@ -8,6 +8,7 @@ import getPosts from '../src/util/get-posts'
 import copyImages from './copy-images'
 import compileCss from './compile-css'
 import createSitemap from './create-sitemap'
+import createRssFeed from './create-rss-feed'
 import createPostPage from './create-post-page'
 import createStaticPages from './create-static-pages'
 
@@ -27,4 +28,6 @@ compileCss(
   path.join(publicDirectory, 'style.min.css')
 )
 
-createSitemap(path.join(__dirname, '..', 'public'))
+createSitemap(publicDirectory)
+
+createRssFeed(posts, publicDirectory)
