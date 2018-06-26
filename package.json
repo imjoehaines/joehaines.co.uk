@@ -45,7 +45,7 @@
   "scripts": {
     "start": "node server.js",
     "build": "babel-node build/index.js",
-    "test": "standard | snazzy",
+    "test": "standard | snazzy # TODO add remark-lint here",
     "watch": "npm-watch"
   },
   "watch": {
