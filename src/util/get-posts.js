@@ -4,7 +4,7 @@ import slug from 'slug'
 import frontMatter from 'front-matter'
 import readingTime from 'reading-time'
 
-module.exports = directory =>
+export default directory =>
   fs.readdirSync(directory).reverse().map(filename => {
     const contents = fs.readFileSync(path.join(directory, filename)).toString()
     const { attributes: { title, description }, body } = frontMatter(contents)
