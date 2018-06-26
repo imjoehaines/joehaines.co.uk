@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
-import { Link as ReactRouterLink } from 'react-router-dom'
 
+import Link from './Link'
 import PostInformation from './PostInformation'
 import formatReadingTime from '../util/format-reading-time'
 
@@ -24,9 +24,9 @@ export default ({ posts }) =>
       {posts.map(({ slug, title, description, date, readingTime }) =>
         <li key={slug} className='blog-list-item'>
           <h2 className='blog-list-item__title'>
-            <ReactRouterLink to={slug}>
+            <Link href={slug}>
               {title}
-            </ReactRouterLink>
+            </Link>
           </h2>
 
           <PostInformation date={date} readingTime={readingTime} />
