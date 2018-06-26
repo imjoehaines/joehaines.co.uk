@@ -18,7 +18,7 @@ export default (posts, publicDirectory) => {
     link: 'https://www.joehaines.co.uk/',
     image: 'https://www.joehaines.co.uk/favicon.png',
     favicon: 'https://www.joehaines.co.uk/favicon.png',
-    copyright: '© 2018 Joe Haines',
+    copyright: `© ${new Date().getFullYear()} Joe Haines`,
     generator: 'Feed for Node.js',
     feedLinks: {
       json: 'http://joehaines.co.uk/feed.json',
