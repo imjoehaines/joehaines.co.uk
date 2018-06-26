@@ -4,7 +4,7 @@ import { Rss } from 'react-feather'
 import Link from './Link'
 
 export default ({ children, description = '', title = '' }) =>
-  <html>
+  <html lang='en'>
     <head>
       <meta charSet='utf-8' />
       <meta name='viewport' content='width=device-width, initial-scale=1' />
