@@ -1,4 +1,3 @@
-// TODO RSS feeds
 // TODO make async
 
 import path from 'path'
