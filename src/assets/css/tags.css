@@ -1,9 +1,11 @@
 :root {
   --dark: #333;
   --mid: #757575;
-  --light: gray(229);
+  --light: #e5e5e5;
   --brand: hsla(211, 90%, 45%, 1);
+  --brand-transparent: hsla(211, 90%, 45%, .5);
   --brand-highlight: hsla(211, 90%, 35%, 1);
+  --brand-highlight-transparent: hsla(211, 90%, 35%, .5);
 
   font-family: BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -25,13 +27,13 @@ body {
 a {
   color: var(--brand);
   text-decoration-skip-ink: auto;
-  text-decoration-color: color(var(--brand) alpha(50%));
+  text-decoration-color: var(--brand-transparent);
 }
 
 a:hover,
 a:focus {
   color: var(--brand-highlight);
-  text-decoration-color: color(var(--brand-highlight) alpha(50%));
+  text-decoration-color: var(--brand-highlight-transparent);
 }
 
 blockquote {

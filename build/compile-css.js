@@ -1,14 +1,13 @@
 import fs from 'fs'
 import cssnano from 'cssnano'
 import postcss from 'postcss'
-import cssnext from 'postcss-cssnext'
 import postcssImport from 'postcss-import'
+import postcssPresetEnv from 'postcss-preset-env'
 
-// TODO use postcss-preset-env instead of cssnext
 export default (sourceFile, destinationFile) => {
   postcss()
     .use(postcssImport())
-    .use(cssnext())
+    .use(postcssPresetEnv({ stage: 3 }))
     .use(cssnano({ preset: 'advanced' }))
     .process(fs.readFileSync(sourceFile), {
       from: sourceFile,
