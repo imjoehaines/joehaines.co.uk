@@ -31,27 +31,28 @@ export default (posts, publicDirectory) => {
     }
   })
 
-  posts.forEach(({ title, description, date, body, slug }) => {
-    remark()
-      .use(remarkHtml)
-      .process(body, (err, { contents }) => {
-        if (err) throw err
+  posts.filter(({ excludeFromFeed }) => !excludeFromFeed)
+    .forEach(({ title, description, date, body, slug }) => {
+      remark()
+        .use(remarkHtml)
+        .process(body, (err, { contents }) => {
+          if (err) throw err
 
-        feed.addItem(({
-          title,
-          description,
-          date,
-          content: contents,
-          id: slug,
-          link: `https://www.joehaines.co.uk/${slug}`,
-          author: [{
-            name: 'Joe Haines',
-            email: 'hello@joehaines.co.uk',
-            link: 'https://www.joehaines.co.uk'
-          }]
-        }))
-      })
-  })
+          feed.addItem(({
+            title,
+            description,
+            date,
+            content: contents,
+            id: slug,
+            link: `https://www.joehaines.co.uk/${slug}`,
+            author: [{
+              name: 'Joe Haines',
+              email: 'hello@joehaines.co.uk',
+              link: 'https://www.joehaines.co.uk'
+            }]
+          }))
+        })
+    })
 
   fs.writeFileSync(
     path.join(publicDirectory, 'feed.xml'),
