@@ -1,10 +1,10 @@
 import React from 'react'
-import { Rss } from 'react-feather'
+import { Rss, Sun, Moon } from 'react-feather'
 
 import Link from './Link'
 
 export default ({ children, description = '', title = '' }) =>
-  <html lang='en'>
+  <html lang='en' className='light-mode'>
     <head>
       <meta charSet='utf-8' />
       <meta name='viewport' content='width=device-width, initial-scale=1' />
@@ -26,6 +26,11 @@ export default ({ children, description = '', title = '' }) =>
     </head>
 
     <body>
+      <a href='#' className='toggle-dark-mode hide' title='Toggle dark mode'>
+        <Moon className='icon-dark-mode' />
+        <Sun className='icon-light-mode' />
+      </a>
+
       {children}
 
       <footer>
@@ -41,5 +46,7 @@ export default ({ children, description = '', title = '' }) =>
           </small>
         </div>
       </footer>
+
+      <script src='/dark-mode.js' />
     </body>
   </html>

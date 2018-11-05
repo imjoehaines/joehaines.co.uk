@@ -12,3 +12,29 @@
 
 @import './media-queries.css';
 @import './print.css';
+
+.toggle-dark-mode {
+  position: absolute;
+  top: .5rem;
+  right: .5rem;
+}
+
+.light-mode .icon-light-mode {
+  display: none;
+}
+
+.dark-mode .icon-dark-mode {
+  display: none;
+}
+
+.dark-mode {
+  --dark: #e5e5e5;
+  --mid: #999;
+  --light: #333;
+  --brand: hsla(211, 90%, 75%, 1);
+  --brand-transparent: hsla(211, 90%, 75%, .5);
+  --brand-highlight: hsla(211, 90%, 65%, 1);
+  --brand-highlight-transparent: hsla(211, 90%, 65%, .5);
+
+  --page-background: #222;
+}

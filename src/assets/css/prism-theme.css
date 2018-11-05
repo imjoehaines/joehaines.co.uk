@@ -1,8 +1,36 @@
+:root {
+  --punctuation: var(--dark);
+  --keyword: hsl(354, 66%, 54%);
+  --string: hsl(212, 94%, 20%);
+  --property: hsl(212, 100%, 39%);
+  --tag: hsl(134, 60%, 33%);
+  --function: hsl(261, 51%, 51%);
+  --inserted-background: hsl(136, 100%, 97%);
+  --inserted: hsl(136, 60%, 33%);
+  --deleted-background: hsl(353, 100%, 97%);
+  --deleted: hsl(356, 72%, 41%);
+  --list: hsl(14, 83%, 60%);
+}
+
+.dark-mode {
+  --punctuation: var(--dark);
+  --keyword: hsl(354, 80%, 64%);
+  --string: hsl(212, 94%, 80%);
+  --property: hsl(212, 100%, 69%);
+  --tag: hsl(134, 60%, 63%);
+  --function: hsl(261, 51%, 71%);
+  --inserted-background: hsl(136, 60%, 33%);
+  --inserted: hsl(136, 100%, 97%);
+  --deleted-background: hsl(356, 72%, 41%);
+  --deleted: hsl(353, 100%, 97%);
+  --list: hsl(14, 83%, 60%);
+}
+
 .token.doctype,
 .token.punctuation,
 .token.variable,
 .token.macro.property {
-  color: #24292e;
+  color: var(--punctuation);
 }
 
 .token.operator,
@@ -10,14 +38,14 @@
 .token.keyword,
 .token.rule,
 .token.builtin {
-  color: #d73a49;
+  color: var(--keyword);
 }
 
 .token.string,
 .token.url,
 .token.regex,
 .token.attr-value {
-  color: #032f62;
+  color: var(--string);
 }
 
 .token.cdata,
@@ -30,13 +58,13 @@
 .token.symbol,
 .token.command,
 .token.code {
-  color: #005cc5;
+  color: var(--property);
 }
 
 .token.tag,
 .token.selector,
 .token.prolog {
-  color: #22863a;
+  color: var(--tag);
 }
 
 .token.function,
@@ -48,17 +76,17 @@
 .token.id,
 .token.url-reference .token.variable,
 .token.attr-name {
-  color: #6f42c1;
+  color: var(--function);
 }
 
 .token.inserted {
-  background-color: #f0fff4;
-  color: #22863a;
+  background-color: var(--inserted-background);
+  color: var(--inserted);
 }
 
 .token.deleted {
-  background-color: #ffeef0;
-  color: #b31d28;
+  background-color: var(--deleted-background);
+  color: var(--deleted);
 }
 
 /* markdown things */
@@ -77,36 +105,36 @@
 
 .token.title {
   font-weight: bold;
-  color: #1d3e81;
+  color: var(--dark);
 }
 
 .token.list {
-  color: #ed6a43;
+  color: var(--list);
 }
 
 /* language specific styles */
 .language-php {
   /* class properties */
   & .token.property {
-    color: #24292e;
+    color: var(--punctuation);;
   }
 }
 
 .language-json {
   /* keys */
   & .token.property {
-    color: #032f62;
+    color: var(--string);
   }
 
   /* colons */
   & .token.operator {
-    color: #24292e;
+    color: var(--punctuation);
   }
 }
 
 .language-markup {
   /* the opening "<" to a tag */
   & .token.tag .token.punctuation {
-    color: #333;
+    color: var(--dark);
   }
 }

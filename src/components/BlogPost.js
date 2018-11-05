@@ -1,6 +1,6 @@
 import React from 'react'
-import { Home, ArrowLeft, ArrowRight } from 'react-feather'
 import Markdown from 'react-markdown'
+import { Home, ArrowLeft, ArrowRight } from 'react-feather'
 
 import Code from './Code'
 import Link from './Link'

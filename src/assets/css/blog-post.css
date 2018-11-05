@@ -41,7 +41,7 @@
 .date-time,
 .description,
 .reading-time {
-  color: rgba(0, 0, 0, 0.6);
+  color: var(--mid);
 }
 
 .reading-time {
