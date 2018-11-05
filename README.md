@@ -1,4 +1,4 @@
-# JoeHaines.co.uk [![Greenkeeper badge](https://badges.greenkeeper.io/imjoehaines/joehaines.co.uk.svg)](https://greenkeeper.io/)
+# JoeHaines.co.uk
 
 This is the code that powers my personal website [joehaines.co.uk](https://www.joehaines.co.uk).
 
