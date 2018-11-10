@@ -2,7 +2,9 @@ const toggle = document.querySelector('.toggle-dark-mode')
 
 let isDarkModeEnabled = +window.localStorage.getItem('dark-mode') === 1 || false
 
-toggle.addEventListener('click', function () {
+toggle.addEventListener('click', function (event) {
+  event.preventDefault()
+
   isDarkModeEnabled = !isDarkModeEnabled
 
   render(isDarkModeEnabled)
