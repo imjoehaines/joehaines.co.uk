@@ -17,8 +17,6 @@ export default ({ children, description = '', title = '' }) =>
       <link rel='alternate' title='Joe Haines' type='application/json' href='/feed.json' />
       <link rel='alternate' title='Joe Haines' type='application/atom+xml' href='/feed.atom' />
 
-      <script async type='text/javascript' src='https://plausible.io/js/analytics.js' />
-
       <meta
         name='description'
         content={`Joe Haines, software developer from the UK${description && ` - ${description}`}`}
