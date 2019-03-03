@@ -12,10 +12,6 @@
   margin-left: -2rem;
   padding-left: 2rem;
 
-  /* make the heading extra wide (100% + 2rem padding-left + 2rem padding-right) */
-  /* this lets the hover show the anchor when hovering over the right padding on <body> */
-  width: calc(100% + 4rem);
-
   display: flex;
   align-items: center;
 }
