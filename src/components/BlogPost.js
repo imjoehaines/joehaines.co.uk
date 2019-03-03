@@ -10,7 +10,7 @@ import BlockQuote from './BlockQuote'
 import InlineCode from './InlineCode'
 import PostInformation from './PostInformation'
 
-export default ({ title, date, readingTime, body, previousLink, previousText, nextLink, nextText }) =>
+export default ({ title, date, body, previousLink, previousText, nextLink, nextText }) =>
   <article>
     <header>
       <div className='flex'>
@@ -21,7 +21,7 @@ export default ({ title, date, readingTime, body, previousLink, previousText, ne
         </Link>
       </div>
 
-      <PostInformation date={date} readingTime={readingTime} />
+      <PostInformation date={date} />
     </header>
 
     <Markdown

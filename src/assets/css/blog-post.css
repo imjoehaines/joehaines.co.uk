@@ -35,11 +35,6 @@
 }
 
 .date-time,
-.description,
-.reading-time {
+.description {
   color: rgba(0, 0, 0, 0.6);
-}
-
-.reading-time {
-  display: none;
 }

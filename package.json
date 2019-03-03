@@ -33,7 +33,6 @@
     "react-dom": "^16.4.1",
     "react-feather": "^1.1.0",
     "react-markdown": "^3.2.0",
-    "reading-time": "^1.1.0",
     "remark": "^9.0.0",
     "remark-html": "^7.0.0",
     "rimraf": "^2.6.2",
