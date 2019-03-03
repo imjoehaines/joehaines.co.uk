@@ -1,6 +1,6 @@
 import fs from 'fs'
 import path from 'path'
-import Feed from 'feed'
+import { Feed } from 'feed'
 import remark from 'remark'
 import remarkHtml from 'remark-html'
 
