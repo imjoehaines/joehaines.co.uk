@@ -35,9 +35,17 @@ a:focus {
 }
 
 blockquote {
-  margin: 1rem 1rem 1rem 2rem;
-  padding-left: 1rem;
+  margin: 1rem;
+  padding: .5rem 1rem;
   border-left: 2px solid var(--light);
+}
+
+blockquote > p:first-child {
+  margin-top: 0;
+}
+
+blockquote > p:last-child {
+  margin-bottom: 0;
 }
 
 pre,
@@ -145,4 +153,25 @@ th:last-child,
 td:last-child {
   padding-right: 0;
   border-right: none;
+}
+
+/* blocks */
+.post-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.post__date,
+.post-list__date {
+  margin-top: .5rem;
+}
+
+/* utilities */
+.pull-right {
+  float: right;
+}
+
+.soft {
+  color: var(--mid);
 }

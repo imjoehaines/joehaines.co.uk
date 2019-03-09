@@ -5,7 +5,9 @@
     <header>
       <h2>{{ page.title }}</h2>
 
-      {{ macros::display_date(date=page.date) }}
+      <div class="post__date soft">
+        {{ macros::display_date(date=page.date) }}
+      </div>
     </header>
 
     {{ page.content | safe }}

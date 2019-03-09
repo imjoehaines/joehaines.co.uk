@@ -23,13 +23,13 @@
         <a href="/">Joe Haines</a>
       </h1>
 
-      <p>Software developer from the UK</p>
+      <p class="soft">Software developer from the UK</p>
     {% endblock %}
   </header>
 
   <main>
     {% block content %}
-      <ul>
+      <ul class="post-list">
         {% for page in section.pages %}
           <li>
             <h2>
@@ -38,7 +38,9 @@
               </a>
             </h2>
 
-            {{ macros::display_date(date=page.date) }}
+            <div class="post-list__date soft">
+              {{ macros::display_date(date=page.date) }}
+            </div>
           </li>
         {% endfor %}
       </ul>
@@ -50,7 +52,7 @@
       © {{ now() | date(format="%Y") }} <a href="/">Joe Haines</a>
     </span>
 
-    <span>
+    <span class="pull-right">
       <a href="/rss.xml">
         RSS feed
       </a>
