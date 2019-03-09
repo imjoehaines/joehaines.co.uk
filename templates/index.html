@@ -18,11 +18,13 @@
 </head>
 <body>
   <header>
-    <h1>
-      <a href="/">Joe Haines</a>
-    </h1>
+    {% block heading %}
+      <h1>
+        <a href="/">Joe Haines</a>
+      </h1>
 
-    <p>Software developer from the UK</p>
+      <p>Software developer from the UK</p>
+    {% endblock %}
   </header>
 
   <main>
