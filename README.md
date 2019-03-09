@@ -2,16 +2,6 @@
 
 This is the code that powers my personal website [joehaines.co.uk](https://www.joehaines.co.uk).
 
-## TODO
+It's built with [Zola](https://www.getzola.org/), a static site generator written in Rust.
 
-- [x] 404 template
-- [x] netlify configuration for zola
-- [ ] this readme
-- [x] add headers and redirect rules
-- [x] fix CSP for inline CSS (syntax highlighting)
-- [x] try to get around opening php tags for syntax highlighting
-- [x] redirect rss feed
-- [x] don't link to home page on the home page
-- [x] styling
-  - [x] remove some body padding on mobile devices
-  - [x] delete "Markdown test" after styling
+Follow the [Zola installation instructions](https://www.getzola.org/documentation/getting-started/installation/) and [CLI usage](https://www.getzola.org/documentation/getting-started/cli-usage/) to build the site yourself.
