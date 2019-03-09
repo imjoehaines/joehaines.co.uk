@@ -30,7 +30,7 @@
   <main>
     {% block content %}
       <ul>
-        {% for page in section.pages | reverse %}
+        {% for page in section.pages %}
           <li>
             <h2>
               <a href="/{{ page.slug }}">
