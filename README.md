@@ -13,4 +13,4 @@ This is the code that powers my personal website [joehaines.co.uk](https://www.j
 - [ ] try to get around opening php tags for syntax highlighting
 - [x] redirect rss feed
 - [ ] styling
-  - [ ] remove some body padding on mobile devices
+  - [x] remove some body padding on mobile devices

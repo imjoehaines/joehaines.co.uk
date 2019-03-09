@@ -175,3 +175,9 @@ td:last-child {
 .soft {
   color: var(--mid);
 }
+
+@media (max-width: 680px) {
+  body {
+    padding: 1rem;
+  }
+}
