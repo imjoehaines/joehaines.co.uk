@@ -21,8 +21,5 @@ description = "Software developer from the UK"
 # the default language, used in RSS and coming i18n
 default_language = "en"
 
-# Theme name to use
-theme = ""
-
 [extra]
 # Put all your custom variables here
