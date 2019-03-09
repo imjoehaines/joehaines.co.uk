@@ -17,7 +17,7 @@
 {%- endmacro nicedate -%}
 
 {%- macro index_link_when_not_index() -%}
-  {%- if current_path == "/" -%}
+  {%- if current_path is defined and current_path == "/" -%}
     Joe Haines
   {%- else -%}
     <a href="/">Joe Haines</a>
