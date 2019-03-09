@@ -1,7 +1,7 @@
----
-title: Decorators
-description: and why they're the best
----
++++
+title = "Decorators"
+description = "and why they're the best"
++++
 A decorator is a function or class that can extend the capabilities of another function or class without inheriting from it. It allows new code to add or alter behaviour while the existing code remains unchanged.
 
 In JavaScript (and much of the functional world) decorators will usually be functions:

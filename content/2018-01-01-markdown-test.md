@@ -1,8 +1,7 @@
----
-title: Markdown test
-description: Testing markdown element rendering
-excludeFromFeed: true
----
++++
+title = "Markdown test"
+description = "Testing markdown element rendering"
++++
 
 # Heading level 1
 

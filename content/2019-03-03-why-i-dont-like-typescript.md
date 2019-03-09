@@ -1,7 +1,7 @@
----
-title: Why I don't like Typescript
-description: There are lots of reasons but it's fine if you like it!
----
++++
+title = "Why I don't like Typescript"
+description = "There are lots of reasons but it's fine if you like it!"
++++
 Typescript is unarguably a _very_ popular language. According to [GitHub's “State of the Octoverse”](https://github.blog/2018-11-15-state-of-the-octoverse-top-programming-languages/) it was the 3rd fastest growing language of 2018 and [StackOverflow ranks it 12th](https://insights.stackoverflow.com/survey/2018#technology) in terms of the “Most Popular Technologies” in their 2018 developer survey.
 
 In this post I'm going to put forward my case for **Why I Don't Like Typescript**.
