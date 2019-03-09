@@ -1,0 +1,14 @@
+{% extends "index.html" %}
+
+{% block content %}
+  <header>
+    <h2>{{ page.title }}</h2>
+
+    {{ macros::display_date(date=page.date) }}
+  </header>
+
+
+  <article>
+    {{ page.content | safe }}
+  </article>
+{% endblock %}
