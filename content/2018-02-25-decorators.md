@@ -31,6 +31,8 @@ In my [Flowder](https://github.com/imjoehaines/flowder) library I use decorators
 In order to load a directory of fixture files, a `PhpFileLoader` and `DirectoryLoader` are composed together:
 
 ```php
+<?php
+
 $loader = new DirectoryLoader(
     new PhpFileLoader()
 );
@@ -39,6 +41,8 @@ $loader = new DirectoryLoader(
 Implementing the `DirectoryLoader` is as easy as accepting a loader in its constructor&hellip;
 
 ```php
+<?php
+
 public function __construct(LoaderInterface $loader)
 {
     $this->loader = $loader;
@@ -48,6 +52,8 @@ public function __construct(LoaderInterface $loader)
 &hellip;and calling its `load` method when appropriate, inside its own `load` method:
 
 ```php
+<?php
+
 public function load($directory)
 {
     foreach (glob($directory . '/*') as $file) {
@@ -63,6 +69,8 @@ Given a project of enough size, loading a directory full of files repeated may b
 We can add this to our previous loader configuration&hellip;
 
 ```php
+<?php
+
 $loader = new CachingLoader(
     new DirectoryLoader(
         new PhpFileLoader()

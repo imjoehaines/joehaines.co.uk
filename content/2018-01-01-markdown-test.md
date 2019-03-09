@@ -129,19 +129,17 @@ CSS `.abc { font-weight: bolder; }` (highlighted as CSS)
 
 #### JavaScript
 
-```jsx
-import React from 'react'
+```js
 import format from 'date-fns/format'
 
-export default ({ date }) =>
-  <time dateTime={date.toISOString()}>
-    {format(date, 'Do MMMM YYYY')}
-  </time>
+export default ({ date }) => format(date, 'Do MMMM YYYY')
 ```
 
 #### PHP
 
 ```php
+<?php
+
 class Validator implements ValidatorInterface
 {
     public function __construct(ValidatorInterface ... $validators)
