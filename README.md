@@ -4,7 +4,7 @@ This is the code that powers my personal website [joehaines.co.uk](https://www.j
 
 ## TODO
 
-- [ ] 404 template
+- [x] 404 template
 - [ ] styling
 - [ ] netlify configuration for zola
 - [ ] this readme
