@@ -50,7 +50,7 @@ Typescript's type system is inherently unsafe — they admit as much in [the off
 
 Whether this is OK or not depends on what you think the goal of a language like Typescript should be. If you want to promote type safety in JavaScript then this decision makes sense — it's much easier to convert existing JavaScript code to Typescript by allowing common patterns that are unsafe. If, however, you think the goal of a typed compile-to-JS language should be to allow you to write safe programs then you might want to look elsewhere.
 
-Typescript's type system also has another problem; it's way too easy to ignore. What I mean by this are the “escape hatches” built into the language in the form of the `any` type and [type assertions](https://github.com/Microsoft/TypeScript/blob/master/doc/spec.md#416-type-assertions).
+Typescript's type system also has another problem; it's way too easy to ignore. What I mean by this are the “escape hatches” built into the language, such as the `any` type and [type assertions](https://github.com/Microsoft/TypeScript/blob/master/doc/spec.md#416-type-assertions).
 
 The `any` type is widely recognised as a potential problem, but it's worth highlighting how using it is incredibly unsafe and how the “`noImplicitAny`” configuration option isn't enabled by default. Given that you can enable this option easily and it's fairly widely known, I don't think this is a _major_ problem with Typescript.
 
