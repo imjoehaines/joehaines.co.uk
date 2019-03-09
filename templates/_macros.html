@@ -15,3 +15,11 @@
     {{ day }}{{ suffix }} {{ date | date(format="%B %Y") }}
   </time>
 {%- endmacro nicedate -%}
+
+{%- macro index_link_when_not_index() -%}
+  {%- if current_path == "/" -%}
+    Joe Haines
+  {%- else -%}
+    <a href="/">Joe Haines</a>
+  {%- endif -%}
+{%- endmacro -%}

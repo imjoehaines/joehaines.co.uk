@@ -19,9 +19,7 @@
 <body>
   <header>
     {% block heading %}
-      <h1>
-        <a href="/">Joe Haines</a>
-      </h1>
+      <h1>{{ macros::index_link_when_not_index() }}</h1>
 
       <p class="soft">Software developer from the UK</p>
     {% endblock %}
@@ -49,7 +47,7 @@
 
   <footer>
     <span>
-      © {{ now() | date(format="%Y") }} <a href="/">Joe Haines</a>
+      © {{ now() | date(format="%Y") }} {{ macros::index_link_when_not_index() }}
     </span>
 
     <span class="pull-right">
