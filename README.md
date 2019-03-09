@@ -9,5 +9,6 @@ This is the code that powers my personal website [joehaines.co.uk](https://www.j
 - [x] netlify configuration for zola
 - [ ] this readme
 - [ ] delete "Markdown test" after styling
-- [ ] fix CSP for inline CSS (syntax highlighting)
+- [x] add headers and redirect rules
+- [x] fix CSP for inline CSS (syntax highlighting)
 - [ ] try to get around opening php tags for syntax highlighting
