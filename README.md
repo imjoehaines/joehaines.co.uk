@@ -2,23 +2,6 @@
 
 This is the code that powers my personal website [joehaines.co.uk](https://www.joehaines.co.uk).
 
-## Developing
+It's built with [Zola](https://www.getzola.org/), a static site generator written in Rust.
 
-- `yarn start` to launch local express server on port 3000
-- `yarn build` to build blog locally
-- `yarn watch` to watch files in `src/` for changes and rebuild
-
-## Writing
-
-New blog posts are markdown files in the `posts` directory and have filenames of the post creation date in `YYYY-MM-DD` format.
-
-Each post has a `title` and `description` in front matter, e.g.
-
-```markdown
----
-title: Hello world
-description: Let's see if this works...
----
-```
-
-The body of the post then follows.
+Follow the [Zola installation instructions](https://www.getzola.org/documentation/getting-started/installation/) and [CLI usage](https://www.getzola.org/documentation/getting-started/cli-usage/) to build the site yourself.

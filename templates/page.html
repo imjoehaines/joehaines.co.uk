@@ -1,0 +1,15 @@
+{% extends "index.html" %}
+
+{% block content %}
+  <article>
+    <header>
+      <h2>{{ page.title }}</h2>
+
+      <div class="post__date soft">
+        {{ macros::display_date(date=page.date) }}
+      </div>
+    </header>
+
+    {{ page.content | safe }}
+  </article>
+{% endblock %}

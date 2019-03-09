@@ -1,9 +1,0 @@
-{
-  "extends": [
-    "config:base"
-  ],
-  "baseBranches": [
-    "staging"
-  ],
-  "rangeStrategy": "pin"
-}

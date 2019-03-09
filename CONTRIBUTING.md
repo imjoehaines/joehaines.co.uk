@@ -1,3 +1,0 @@
-- `yarn start` to launch local express server on port 3000
-- `yarn build` to build blog locally
-- `yarn watch` to watch files in `src/` for changes and rebuild
