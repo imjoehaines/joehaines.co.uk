@@ -8,7 +8,7 @@ In this post I'm going to put forward my case for **Why I Don't Like Typescript*
 
 Before I start I want to make it clear that this is my opinion. You might disagree and that's fine! Some of the things in this post are subjective because different people have different experiences and expectations so something that bothers me might not bother you. If you like using Typescript then you should keep using it, all I'd encourage you to do is checkout some of the other options as you might like them more.
 
-## Its type inference is poor at best
+### Its type inference is poor at best
 
 Type inference means that a programming language can detect the type of a variable without the programmer explicitly stating it. Some languages do this better than others but Typescript disappointed me with how poor its inference is, especially for a relatively new language.
 
@@ -42,7 +42,7 @@ export default one
 
 This doesn't seem like a big deal in this single example, but across a large code base this leads to huge amounts of pointless type annotations. If you've never used a language with a [Hindley–Milner type system](https://en.wikipedia.org/wiki/Hindley%E2%80%93Milner_type_system) then you might not realise how much nicer it can be when the compiler does most of the hard work of determining types for you.
 
-## Unsafe type system
+### Unsafe type system
 
 Typescript's type system is inherently unsafe — they admit as much in [the official handbook](https://www.typescriptlang.org/docs/handbook/type-compatibility.html#a-note-on-soundness):
 
@@ -71,7 +71,7 @@ Here we've declared an interface with two typed properties and made a fetch call
 
 Allowing you to mark a JSON payload as any type you like without having to prove it to the compiler opens a massive, dangerous hole in a code base. While a best practice would always be to validate the response and manually convert it to the correct type, any sufficiently large code base will inevitably end up with undesirable code without any intentional maliciousness.
 
-## Community type definitions
+### Community type definitions
 
 One of the main things pushing Typescript's usage is the [DefinitelyTyped](https://definitelytyped.org/) project and other community led type definitions for open source libraries.
 
@@ -81,7 +81,7 @@ Without much better inference and a Typescript runtime to check for type errors 
 
 In order to have a code base that's protected from these kinds of errors, you need a _really_ good unit test suite to help ensure all of the typings are correct. This is fine, but if you're going to ensure type safety through an incredibly thorough test suite then does Typescript add anything?
 
-## What's the alternative?
+### What's the alternative?
 
 Typescript does what it sets out to do pretty well — it's a compile-to-JavaScript language that looks and feels **a lot** like JavaScript which massively reduces the barrier to entry for front end developers. What it doesn't do that well is provide a type system that _ensures_ type safety (as much as a type system can).
 
