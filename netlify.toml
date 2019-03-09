@@ -29,6 +29,12 @@ command = "curl -sL https://github.com/getzola/zola/releases/download/v0.5.0/zol
   to = "https://www.joehaines.co.uk/:splat"
   force = true
 
+# We used to have an RSS feed at "feed.xml", but now it's at "rss.xml"
+[[redirects]]
+  from = "https://www.joehaines.co.uk/feed.xml"
+  to = "https://www.joehaines.co.uk/rss.xml"
+  force = true
+
 # Headers
 [[headers]]
   for = "/*"
