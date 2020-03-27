@@ -183,3 +183,16 @@ td:last-child {
     padding: 1rem;
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #2e3440;
+    --foreground: #eceff4;
+    --soft: #d8dee9;
+    --softer: #4c566a;
+    --brand: #88c0d0;
+    --brand-transparent: #88c0d080;
+    --brand-highlight: #a3be8c;
+    --brand-highlight-transparent: #a3be8c80;
+  }
+}
