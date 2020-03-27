@@ -1,7 +1,7 @@
 :root {
-  --dark: #333;
-  --mid: #757575;
-  --light: #e5e5e5;
+  --foreground: #333;
+  --soft: #757575;
+  --softer: #e5e5e5;
   --brand: #0b6fda;
   --brand-transparent: rgba(12, 111, 218, .5);
   --brand-highlight: #0957aa;
@@ -9,7 +9,7 @@
 
   font-family: BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.5;
-  color: var(--dark);
+  color: var(--foreground);
 }
 
 * {
@@ -37,7 +37,7 @@ a:focus {
 blockquote {
   margin: 1rem;
   padding: .5rem 1rem;
-  border-left: 2px solid var(--light);
+  border-left: 2px solid var(--softer);
 }
 
 blockquote > p:first-child {
@@ -57,7 +57,7 @@ code {
 pre {
   margin: 1rem 0 0;
   padding: 1rem;
-  border: 1px solid var(--light);
+  border: 1px solid var(--softer);
   overflow: auto;
   background: white !important;
 }
@@ -117,13 +117,13 @@ header {
 hr {
   border: 0;
   height: 0;
-  border-bottom: 2px solid var(--light);
+  border-bottom: 2px solid var(--softer);
   margin: 2rem 0;
 }
 
 small {
   font-size: .8rem;
-  color: var(--mid);
+  color: var(--soft);
 }
 
 table {
@@ -135,14 +135,14 @@ table {
 
 th {
   font-weight: bold;
-  border-bottom: 2px solid var(--light);
+  border-bottom: 2px solid var(--softer);
 }
 
 th,
 td {
   padding: .8rem 1rem;
   text-align: left;
-  border-right: 2px solid var(--light);
+  border-right: 2px solid var(--softer);
 }
 
 th:first-child,
@@ -174,7 +174,7 @@ td:last-child {
 }
 
 .soft {
-  color: var(--mid);
+  color: var(--soft);
 }
 
 @media (max-width: 680px) {
