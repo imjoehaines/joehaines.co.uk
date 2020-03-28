@@ -59,7 +59,6 @@ code {
 pre {
   margin: 1rem 0 0;
   padding: 1rem;
-  border: 1px solid var(--softer);
   overflow: auto;
 }
 
@@ -67,6 +66,12 @@ img {
   display: block;
   max-width: 100%;
 }
+
+img,
+pre {
+  border: 2px solid var(--softer);
+}
+
 footer {
   margin-top: 2rem;
 }
