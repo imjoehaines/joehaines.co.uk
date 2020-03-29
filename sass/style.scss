@@ -1,4 +1,4 @@
-:root {
+@mixin light-mode-variables {
   --background: #fff;
   --foreground: #333;
   --soft: #757575;
@@ -7,6 +7,21 @@
   --brand-transparent: rgba(12, 111, 218, .5);
   --brand-highlight: #0957aa;
   --brand-highlight-transparent: rgba(9, 87, 170, .5);
+}
+
+@mixin dark-mode-variables {
+    --background: #2e3440;
+    --foreground: #eceff4;
+    --soft: #d8dee9;
+    --softer: #4c566a;
+    --brand: #88c0d0;
+    --brand-transparent: #88c0d080;
+    --brand-highlight: #a3be8c;
+    --brand-highlight-transparent: #a3be8c80;
+}
+
+:root {
+  @include light-mode-variables;
 
   font-family: BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -24,14 +39,17 @@ body {
   max-width: 35rem;
 }
 
-a {
+a,
+.link {
   color: var(--brand);
   text-decoration-skip-ink: auto;
   text-decoration-color: var(--brand-transparent);
 }
 
 a:hover,
-a:focus {
+a:focus,
+.link:hover,
+.link:focus {
   color: var(--brand-highlight);
   text-decoration-color: var(--brand-highlight-transparent);
 }
@@ -180,6 +198,24 @@ td:last-child {
   color: var(--soft);
 }
 
+.dark-mode-toggle {
+  float: right;
+}
+
+.link {
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-size: 1rem;
+  text-decoration-line: underline;
+}
+
+.link:hover {
+  cursor: pointer;
+}
+
 @media (max-width: 680px) {
   body {
     padding: 1rem;
@@ -188,13 +224,14 @@ td:last-child {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #2e3440;
-    --foreground: #eceff4;
-    --soft: #d8dee9;
-    --softer: #4c566a;
-    --brand: #88c0d0;
-    --brand-transparent: #88c0d080;
-    --brand-highlight: #a3be8c;
-    --brand-highlight-transparent: #a3be8c80;
+    @include dark-mode-variables;
   }
+}
+
+.light-mode {
+  @include light-mode-variables;
+}
+
+.dark-mode {
+  @include dark-mode-variables;
 }
