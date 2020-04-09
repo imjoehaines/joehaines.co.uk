@@ -2,12 +2,12 @@
 
 {% block content %}
   <article>
-    <header>
-      <h2>{{ page.title }}</h2>
-
+    <header class="post-header">
       <div class="post__date soft">
-        {{ macros::display_date(date=page.date) }}
+        {{ page.date }}
       </div>
+
+      <h2>{{ page.title }}</h2>
     </header>
 
     {{ page.content | safe }}
