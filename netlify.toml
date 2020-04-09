@@ -23,22 +23,22 @@ command = "zola build --base-url $DEPLOY_PRIME_URL"
   force = true
 
 [[redirects]]
-  from = "https://joehaines.dev/*"
-  to = "https://www.joehaines.co.uk/:splat"
-  force = true
-
-[[redirects]]
-  from = "https://www.joehaines.dev/*"
-  to = "https://www.joehaines.co.uk/:splat"
-  force = true
-
-[[redirects]]
   from = "https://joehaines.netlify.com/*"
   to = "https://www.joehaines.co.uk/:splat"
   force = true
 
 [[redirects]]
   from = "https://www.joehaines.netlify.com/*"
+  to = "https://www.joehaines.co.uk/:splat"
+  force = true
+
+[[redirects]]
+  from = "https://joehaines.netlify.app/*"
+  to = "https://www.joehaines.co.uk/:splat"
+  force = true
+
+[[redirects]]
+  from = "https://www.joehaines.netlify.app/*"
   to = "https://www.joehaines.co.uk/:splat"
   force = true
 
